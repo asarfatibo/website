@@ -131,5 +131,76 @@
       "paris": "bubbleOut à Paris"
     },
     "baseline": "bubbleOut | fait avec soin entre Montréal et Paris"
+  },
+  "cityPages": {
+    "montreal": {
+      "metaTitle": "bubbleOut Montréal | Events, Clubs et sorties près de toi",
+      "metaDescription": "Sortir à Montréal et rencontrer du monde autour de ce que tu aimes : Events spontanés, Clubs qui durent, du Plateau au Village. Gratuit, profil vérifié.",
+      "h1": "Sortir et trouver tes humains à Montréal.",
+      "heroSubtitle": "Des Events spontanés et des Clubs qui durent, du Plateau au Village. {users} humains sortent déjà ensemble ici.",
+      "heroMockupAlt": "L'app bubbleOut ouverte sur un Event à Montréal",
+      "heroPhotoAlt": "Un groupe d'humains réunis à un Event bubbleOut à Montréal",
+      "proofSrTitle": "Montréal en chiffres",
+      "proofUsers": "humains à Montréal",
+      "eventsTitle": "Les Events du mois dernier à Montréal",
+      "eventsSubtitle": "Ça, c'est ce qui s'est passé le mois dernier, du Parc La Fontaine au Quai de l'Horloge. Le prochain est peut-être le tien.",
+      "eventsCta": "Rate pas les prochains",
+      "howSteps": [
+        {
+          "title": "Découvre ce qui se passe dans ton coin",
+          "body": "Des Events et des Clubs près de chez toi, du Mile End au Village, selon tes envies."
+        },
+        {
+          "title": "Rejoins, ou propose ton plan",
+          "body": "Un pique-nique au parc La Fontaine te parle ? Demande à rejoindre. Rien ne te tente ? Propose ton plan en 2 minutes."
+        },
+        {
+          "title": "Retrouve tes humains",
+          "body": "Le chat du groupe, les Talks pour voter la prochaine sortie. Terrasse en été, café quand il fait -20 : vous vous revoyez."
+        }
+      ],
+      "clubsIntro": "Un Event, c'est un soir. Un Club, c'est ce qui fait que vous vous revoyez : un dimanche au parc La Fontaine, un 5 à 7 qui devient rituel. C'est la façon la plus simple de se faire des amis à Montréal : faire des trucs ensemble, souvent.",
+      "personas": [
+        {
+          "title": "Tu viens d'arriver à Montréal",
+          "body": "Nouvelle ville, nouveaux repères. Ta communauté locale à partir du jour 1 : commence en observant, personne ne te presse."
+        },
+        {
+          "title": "Ton crew s'est dispersé",
+          "body": "Des humains pour tes mardis ordinaires, pas juste les soirs de festival."
+        },
+        {
+          "title": "Tu rassembles les gens",
+          "body": "Crée ton Club, propose des Events, bâtis ta communauté montréalaise. C'est toi l'admin."
+        },
+        {
+          "title": "T'as envie de spontané",
+          "body": "Un rayon de soleil en avril, un plan en 2 minutes. Viens une fois, zéro obligation. Si la vibe te parle, t'as trouvé tes gens."
+        }
+      ],
+      "finalSubtitle": "Montréal sort déjà. Rejoins-la."
+    },
+    "paris": {
+      "metaTitle": "bubbleOut Paris | fonde ton Club, sois dans les premiers",
+      "metaDescriptionPre": "bubbleOut arrive à Paris. Fonde un des premiers Clubs de ta ville, propose des sorties et fais-toi des amis autour de ce que tu aimes faire. Profil vérifié.",
+      "metaDescriptionLive": "bubbleOut ouvre à Paris. Fonde un des premiers Clubs de ta ville, propose des sorties et fais-toi des amis autour de ce que tu aimes faire. Profil vérifié.",
+      "h1Pre": "bubbleOut arrive à Paris : les premiers Clubs se créent maintenant.",
+      "h1Live": "bubbleOut est à Paris : les premiers Clubs se créent maintenant.",
+      "heroSubtitlePre": "Running, apéro, jeux, musique : les premiers Clubs de Paris vont naître ici. Ceux qui arrivent maintenant donnent le ton de ce que Paris va devenir.",
+      "heroSubtitleLive": "Running, apéro, jeux, musique : les premiers Clubs se créent en ce moment. Ceux qui arrivent maintenant donnent le ton de ce que Paris va devenir.",
+      "ctaPrimary": "Fonde ton Club",
+      "ctaMicrocopy": "Créé en quelques secondes. Public ou privé, c'est toi l'admin.",
+      "heroMockupAlt": "L'app bubbleOut ouverte sur un Club",
+      "heroPhotoAlt": "Un groupe d'humains qui passent du temps ensemble",
+      "awaitTitle": "Ce qui t'attend",
+      "awaitIntro": "bubbleOut a commencé à Montréal. Plutôt que te promettre, on te montre.",
+      "awaitStatsTitle": "À Montréal, aujourd'hui :",
+      "awaitStatUsers": "humains",
+      "awaitStatEvents": "Events créés le mois dernier",
+      "awaitStatClubs": "Clubs actifs",
+      "awaitBody": "Des Clubs de course, d'apéro, de jeux qui se retrouvent et se revoient : Club Run MTL, Time to apéritz, Le club des loups-garous ( Jeu 🐺 ). Des humains qui se sont croisés à un Event et qui se revoient depuis.",
+      "awaitRelay": "Paris commence ce chapitre. Le Club de course des Buttes-Chaumont, l'apéro du canal Saint-Martin, la table de jeux du Marais : tout reste à fonder. Et le premier arrivé choisit l'ambiance.",
+      "finalSubtitle": "Paris, ça commence. La suite dépend de qui arrive maintenant."
+    }
   }
 }

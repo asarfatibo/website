@@ -4,7 +4,7 @@
   automatically. Use it for EVERY download CTA; the per-store URLs only feed
   the official badges and JSON-LD.
 */
-export const DOWNLOAD_LINK = "https://bubbleout.app.link";
+export const DOWNLOAD_LINK = "https://bubbleout.app.link/O3nEWHvv7Sb";
 
 export const STORE_LINKS = {
   appStore: "https://apps.apple.com/fr/app/bubbleout-sortir-et-se-revoir/id6741350091",
@@ -30,10 +30,19 @@ export const SITE_URL = "https://bubbleout.fr";
 export const LIVE_STATS = {
   usersMtlParis: 2027,
   usersDisplay: "2 000+",
+  usersMontreal: 1935,
   events30d: 42,
   rating: "4,2 / 5",
+  clubsTotal: 12,
   snapshotDate: "2026-06-10",
 } as const;
+
+/*
+  Paris launch toggle — drives the [PRÉ-LANCEMENT] vs [JOUR J] wording on
+  /paris (copy doc: marketing/website/copy/2026-06-10-paris.md). Flip to true
+  on launch day.
+*/
+export const PARIS_LAUNCHED = false;
 
 /*
   App Store rating + reviews — fetched 2026-06-10 from the live App Store

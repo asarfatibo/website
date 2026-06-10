@@ -1,5 +1,5 @@
 Global deeplink for app usin branch.io:
-https://bubbleout.app.link
+https://bubbleout.app.link/O3nEWHvv7Sb
 
 Global deeplink for Montreal Default social club on html website:
 https://bubbleout.app.link/EYBMlvDl22b

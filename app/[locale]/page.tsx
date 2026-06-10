@@ -13,31 +13,10 @@ import {
   STORE_LINKS,
 } from "@/lib/constants";
 import { StoreBadges } from "@/components/StoreBadges";
+import { DownloadButton, Stars } from "@/components/ui";
+import { ACCENTS, accentBar, accentBg, accentTag, type Accent } from "@/lib/theme";
 import instagramPosts from "@/lib/instagram-posts.json";
 
-const ACCENTS = ["blue", "green", "purple", "pink"] as const;
-type Accent = (typeof ACCENTS)[number];
-
-const accentBg: Record<Accent, string> = {
-  blue: "bg-blue-light/30",
-  green: "bg-green-light/30",
-  purple: "bg-purple-light/30",
-  pink: "bg-pink-light/40",
-};
-
-const accentBar: Record<Accent, string> = {
-  blue: "bg-blue",
-  green: "bg-green",
-  purple: "bg-purple",
-  pink: "bg-pink",
-};
-
-const accentTag: Record<Accent, string> = {
-  blue: "bg-blue text-white",
-  green: "bg-green text-white",
-  purple: "bg-purple text-white",
-  pink: "bg-pink text-ink",
-};
 
 const PERSONA_PHOTOS = [
   "/assets/pictures/photo-walk-group.avif",
@@ -52,24 +31,6 @@ const HOW_SCREENS = [
   "/assets/mockup-app/french/chat.png",
 ] as const;
 
-function DownloadButton({ label, light = false }: { label: string; light?: boolean }) {
-  const cls = light
-    ? "rounded-cta bg-white px-8 py-4 text-lg font-bold text-blue transition-transform hover:scale-[1.03]"
-    : "rounded-cta bg-blue px-8 py-4 text-lg font-bold text-white transition-transform hover:scale-[1.03]";
-  return (
-    <a href={DOWNLOAD_LINK} className={`inline-block ${cls}`}>
-      {label}
-    </a>
-  );
-}
-
-function Stars({ label }: { label: string }) {
-  return (
-    <span aria-label={label} role="img" className="text-pink">
-      {"★★★★★"}
-    </span>
-  );
-}
 
 export default async function HomePage({
   params,
