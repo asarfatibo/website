@@ -14,14 +14,9 @@ import {
 } from "@/lib/constants";
 import { StoreBadges } from "@/components/StoreBadges";
 import { DownloadButton, Stars } from "@/components/ui";
-import { CityModule } from "@/components/CityModule";
 import { EventsGrid } from "@/components/EventsGrid";
-import { getUpcomingMontrealEvents } from "@/lib/events";
 import { ACCENTS, accentBar, accentBg, accentTag, type Accent } from "@/lib/theme";
 import instagramPosts from "@/lib/instagram-posts.json";
-
-// ISR: the live Events module refreshes every hour without a rebuild.
-export const revalidate = 3600;
 
 
 const PERSONA_PHOTOS = [
@@ -46,9 +41,6 @@ export default async function HomePage({
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const dict = await getDictionary(locale);
-  const liveEvents = await getUpcomingMontrealEvents();
-  const events = liveEvents ?? CURATED_EVENTS;
-  const isLive = liveEvents !== null;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -132,45 +124,17 @@ export default async function HomePage({
         </dl>
       </section>
 
-      {/* S4 — Module ville actif : Events live (ISR 1 h, fallback curaté) ou bloc pionnier Paris */}
-      <CityModule
-        labels={{
-          montreal: dict.header.cities.montreal,
-          paris: dict.header.cities.paris,
-          switchLabel: dict.header.citySwitchLabel,
-        }}
-        montreal={
-          <div>
-            <h2 className="text-3xl md:text-4xl">
-              {isLive ? dict.cityModule.montreal.title : dict.cityModule.montreal.fallbackTitle}
-            </h2>
-            <p className="mt-3 text-lg text-ink/70">
-              {isLive ? dict.cityModule.montreal.subtitle : dict.cityModule.montreal.fallbackSubtitle}
-            </p>
-            <div className="mt-10">
-              <EventsGrid events={events} />
-            </div>
-            <div className="mt-10">
-              <DownloadButton label={dict.cityModule.montreal.cta} />
-            </div>
-          </div>
-        }
-        paris={
-          <div>
-            <h2 className="text-3xl md:text-4xl">{dict.cityModule.paris.title}</h2>
-            <p className="mt-4 max-w-2xl text-lg text-ink/80">{dict.cityModule.paris.body}</p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <DownloadButton label={dict.cityModule.paris.ctaPrimary} />
-              <a
-                href={DOWNLOAD_LINK}
-                className="rounded-cta border-2 border-ink px-6 py-3 font-bold transition-colors hover:bg-ink hover:text-cream"
-              >
-                {dict.cityModule.paris.ctaSecondary}
-              </a>
-            </div>
-          </div>
-        }
-      />
+      {/* S4 — Les Events du mois dernier (grille statique curée — version home validée) */}
+      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <h2 className="text-3xl md:text-4xl">{dict.cityModule.montreal.fallbackTitle}</h2>
+        <p className="mt-3 text-lg text-ink/70">{dict.cityModule.montreal.fallbackSubtitle}</p>
+        <div className="mt-10">
+          <EventsGrid events={CURATED_EVENTS} />
+        </div>
+        <div className="mt-10">
+          <DownloadButton label={dict.cityModule.montreal.cta} />
+        </div>
+      </section>
 
       {/* S5 — Comment ça marche */}
       <section className="bg-white/50 py-16 md:py-20">
