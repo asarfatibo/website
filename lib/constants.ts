@@ -20,22 +20,19 @@ export const SOCIAL_LINKS = {
 export const SITE_URL = "https://bubbleout.fr";
 
 /*
-  Social proof figures — resolved at build time from the live-data pipeline
-  (marketing/_context/live-data.md). Rule: a missing metric is OMITTED from
-  the page, never estimated.
-  usersDisplay: union of active Montréal + Paris users (data-fetcher method:
-  deduped, team accounts excluded), floored to the nearest 50 with a "+" —
-  display rounding requested by Alban 2026-06-10, always rounded DOWN.
+  Social proof figures — maintained by `npm run data:refresh`
+  (scripts/refresh-data.mjs, read-only Mongo, data-fetcher method). Rule: a
+  failing refresh keeps the committed snapshot, never estimates.
+  usersDisplay: union of active Montréal + Paris users, floored to the
+  nearest 50 with a "+" — display rounding requested by Alban 2026-06-10,
+  always rounded DOWN.
 */
-export const LIVE_STATS = {
-  usersMtlParis: 2027,
-  usersDisplay: "2 000+",
-  usersMontreal: 1935,
-  events30d: 42,
-  rating: "4,2 / 5",
-  clubsTotal: 12,
-  snapshotDate: "2026-06-10",
-} as const;
+import liveData from "./live-data.json";
+
+export const LIVE_STATS = liveData.stats;
+export const LIVE_DATA_DATE = liveData.generatedAt;
+
+const CLUB_MEMBERS: Record<string, number> = liveData.clubMembers;
 
 /*
   Paris launch toggle — drives the [PRÉ-LANCEMENT] vs [JOUR J] wording on
@@ -78,12 +75,12 @@ export const REVIEWS = [
 ] as const;
 
 /*
-  Curated past Events — static fallback of the city module until the live
-  API wiring (étape 4). Titles VERBATIM from organizers (live-data.md,
-  curated entities May 2026). Covers are the real event images downloaded
-  from api.bubbleout.fr.
+  Curated past Events — static fallback of the live city module, used when
+  the DB is unreachable or fewer than 4 showable upcoming Events exist.
+  Titles VERBATIM from organizers (live-data.md, curated entities May 2026).
+  Covers are the real event images downloaded from api.bubbleout.fr.
 */
-export const CURATED_EVENTS = [
+export const CURATED_EVENTS: readonly import("./events").EventCard[] = [
   {
     title: "Pique Nique Parc Fontaine",
     date: "24 mai",
@@ -120,12 +117,13 @@ export const CURATED_EVENTS = [
 
 /*
   Showcase Clubs — names and descriptions are organizer verbatim (cuts marked
-  in marketing/website/copy/2026-06-10-home.md), member counts from snapshot.
-  Covers are the real club images from api.bubbleout.fr (club_img/), same
-  convention as event covers. Selection validated at the prioritization gate;
-  admins to be notified before go-live.
+  in marketing/website/copy/2026-06-10-home.md). Member counts come from
+  live-data.json (refreshed by `npm run data:refresh`), with the committed
+  snapshot value as fallback. Covers are the real club images from
+  api.bubbleout.fr (club_img/). Selection validated at the prioritization
+  gate; admins to be notified before go-live.
 */
-export const SHOWCASE_CLUBS = [
+const SHOWCASE_CLUBS_BASE = [
   {
     name: "Time to apéritz",
     theme: "Apéritif",
@@ -159,3 +157,8 @@ export const SHOWCASE_CLUBS = [
     image: "/clubs/loups-garous.jpg",
   },
 ] as const;
+
+export const SHOWCASE_CLUBS = SHOWCASE_CLUBS_BASE.map((club) => ({
+  ...club,
+  members: CLUB_MEMBERS[club.name] ?? club.members,
+}));

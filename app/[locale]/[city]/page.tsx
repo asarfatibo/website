@@ -14,7 +14,12 @@ import {
 } from "@/lib/constants";
 import { StoreBadges } from "@/components/StoreBadges";
 import { DownloadButton } from "@/components/ui";
+import { EventsGrid } from "@/components/EventsGrid";
+import { getUpcomingMontrealEvents, type EventCard } from "@/lib/events";
 import { ACCENTS, accentBar, accentBg, accentTag, type Accent } from "@/lib/theme";
+
+// ISR: the Montréal Events grid refreshes every hour without a rebuild.
+export const revalidate = 3600;
 
 /*
   City landing pages — étape 3. Copy source (validated):
@@ -96,19 +101,21 @@ export default async function CityPage({
   if (!isLocale(locale) || !isCity(city)) notFound();
   const dict = await getDictionary(locale);
 
-  return city === "montreal" ? (
-    <MontrealPage dict={dict} />
-  ) : (
-    <ParisPage dict={dict} />
-  );
+  if (city === "montreal") {
+    const liveEvents = await getUpcomingMontrealEvents();
+    return <MontrealPage dict={dict} liveEvents={liveEvents} />;
+  }
+  return <ParisPage dict={dict} />;
 }
 
 type Dict = Awaited<ReturnType<typeof getDictionary>>;
 
 /* ─── /montreal — proof framing ─── */
 
-function MontrealPage({ dict }: { dict: Dict }) {
+function MontrealPage({ dict, liveEvents }: { dict: Dict; liveEvents: EventCard[] | null }) {
   const page = dict.cityPages.montreal;
+  const events = liveEvents ?? CURATED_EVENTS;
+  const isLive = liveEvents !== null;
   return (
     <>
       <CityJsonLd />
@@ -168,39 +175,13 @@ function MontrealPage({ dict }: { dict: Dict }) {
         </dl>
       </section>
 
-      {/* Events Montréal (fallback statique — module live à l'étape 4) */}
+      {/* Events Montréal — live (ISR 1 h) avec fallback curaté */}
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-        <h2 className="text-3xl md:text-4xl">{page.eventsTitle}</h2>
-        <p className="mt-3 text-lg text-ink/70">{page.eventsSubtitle}</p>
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {CURATED_EVENTS.map((event) => (
-            <li key={event.title}>
-              <a
-                href={DOWNLOAD_LINK}
-                className="group block overflow-hidden rounded-card bg-white/70 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
-                  <Image
-                    src={event.image}
-                    alt={`Event ${event.title} à ${event.place}, Montréal`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <span className={`inline-block rounded-cta px-2.5 py-0.5 text-xs font-bold ${accentTag[event.themeColor as Accent]}`}>
-                    {event.theme}
-                  </span>
-                  <h3 className="mt-2 text-lg leading-snug">{event.title}</h3>
-                  <p className="mt-1 text-sm text-ink/60">
-                    {event.date} · {event.place}
-                  </p>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <h2 className="text-3xl md:text-4xl">{isLive ? page.eventsLiveTitle : page.eventsTitle}</h2>
+        <p className="mt-3 text-lg text-ink/70">{isLive ? page.eventsLiveSubtitle : page.eventsSubtitle}</p>
+        <div className="mt-10">
+          <EventsGrid events={events} />
+        </div>
         <div className="mt-10">
           <DownloadButton label={page.eventsCta} />
         </div>

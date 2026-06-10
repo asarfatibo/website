@@ -14,8 +14,14 @@ import {
 } from "@/lib/constants";
 import { StoreBadges } from "@/components/StoreBadges";
 import { DownloadButton, Stars } from "@/components/ui";
+import { CityModule } from "@/components/CityModule";
+import { EventsGrid } from "@/components/EventsGrid";
+import { getUpcomingMontrealEvents } from "@/lib/events";
 import { ACCENTS, accentBar, accentBg, accentTag, type Accent } from "@/lib/theme";
 import instagramPosts from "@/lib/instagram-posts.json";
+
+// ISR: the live Events module refreshes every hour without a rebuild.
+export const revalidate = 3600;
 
 
 const PERSONA_PHOTOS = [
@@ -40,6 +46,9 @@ export default async function HomePage({
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const dict = await getDictionary(locale);
+  const liveEvents = await getUpcomingMontrealEvents();
+  const events = liveEvents ?? CURATED_EVENTS;
+  const isLive = liveEvents !== null;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -123,46 +132,45 @@ export default async function HomePage({
         </dl>
       </section>
 
-      {/* S4 — Module ville : fallback statique avec les vrais Events de mai.
-          Le module live (Events à venir via API/ISR + switch ville) arrive à l'étape 4. */}
-      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-        <h2 className="text-3xl md:text-4xl">{dict.cityModule.montreal.fallbackTitle}</h2>
-        <p className="mt-3 text-lg text-ink/70">{dict.cityModule.montreal.fallbackSubtitle}</p>
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {CURATED_EVENTS.map((event) => (
-            <li key={event.title}>
+      {/* S4 — Module ville actif : Events live (ISR 1 h, fallback curaté) ou bloc pionnier Paris */}
+      <CityModule
+        labels={{
+          montreal: dict.header.cities.montreal,
+          paris: dict.header.cities.paris,
+          switchLabel: dict.header.citySwitchLabel,
+        }}
+        montreal={
+          <div>
+            <h2 className="text-3xl md:text-4xl">
+              {isLive ? dict.cityModule.montreal.title : dict.cityModule.montreal.fallbackTitle}
+            </h2>
+            <p className="mt-3 text-lg text-ink/70">
+              {isLive ? dict.cityModule.montreal.subtitle : dict.cityModule.montreal.fallbackSubtitle}
+            </p>
+            <div className="mt-10">
+              <EventsGrid events={events} />
+            </div>
+            <div className="mt-10">
+              <DownloadButton label={dict.cityModule.montreal.cta} />
+            </div>
+          </div>
+        }
+        paris={
+          <div>
+            <h2 className="text-3xl md:text-4xl">{dict.cityModule.paris.title}</h2>
+            <p className="mt-4 max-w-2xl text-lg text-ink/80">{dict.cityModule.paris.body}</p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <DownloadButton label={dict.cityModule.paris.ctaPrimary} />
               <a
                 href={DOWNLOAD_LINK}
-                className="group block overflow-hidden rounded-card bg-white/70 shadow-sm transition-shadow hover:shadow-md"
+                className="rounded-cta border-2 border-ink px-6 py-3 font-bold transition-colors hover:bg-ink hover:text-cream"
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
-                  <Image
-                    src={event.image}
-                    alt={`Event ${event.title} à ${event.place}, Montréal`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <span
-                    className={`inline-block rounded-cta px-2.5 py-0.5 text-xs font-bold ${accentTag[event.themeColor as Accent]}`}
-                  >
-                    {event.theme}
-                  </span>
-                  <h3 className="mt-2 text-lg leading-snug">{event.title}</h3>
-                  <p className="mt-1 text-sm text-ink/60">
-                    {event.date} · {event.place}
-                  </p>
-                </div>
+                {dict.cityModule.paris.ctaSecondary}
               </a>
-            </li>
-          ))}
-        </ul>
-        <div className="mt-10">
-          <DownloadButton label={dict.cityModule.montreal.cta} />
-        </div>
-      </section>
+            </div>
+          </div>
+        }
+      />
 
       {/* S5 — Comment ça marche */}
       <section className="bg-white/50 py-16 md:py-20">

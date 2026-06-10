@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.bubbleout.fr",
+        port: "4003",
+        pathname: "/public/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
