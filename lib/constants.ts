@@ -108,8 +108,9 @@ export const CURATED_EVENTS = [
 /*
   Showcase Clubs — names and descriptions are organizer verbatim (cuts marked
   in marketing/website/copy/2026-06-10-home.md), member counts from snapshot.
-  Selection validated at the prioritization gate; admins to be notified before
-  go-live.
+  Covers are the real club images from api.bubbleout.fr (club_img/), same
+  convention as event covers. Selection validated at the prioritization gate;
+  admins to be notified before go-live.
 */
 export const SHOWCASE_CLUBS = [
   {
@@ -118,6 +119,7 @@ export const SHOWCASE_CLUBS = [
     themeColor: "pink",
     members: 49,
     line: "« Fini les 5 à 7 corpo, maintenant on veut que des apéro au soleil ☀️ »",
+    image: "/clubs/time-to-aperitz.jpg",
   },
   {
     name: "MTL Sound Club 🪩",
@@ -125,6 +127,7 @@ export const SHOWCASE_CLUBS = [
     themeColor: "purple",
     members: 38,
     line: "« Un groupe pour celles et ceux qui aiment les soirées où y'a du bon son, une bonne énergie »",
+    image: "/clubs/mtl-sound-club.jpg",
   },
   {
     name: "Club Run MTL",
@@ -132,6 +135,7 @@ export const SHOWCASE_CLUBS = [
     themeColor: "green",
     members: 33,
     line: "« On court, on court et on discute »",
+    image: "/clubs/club-run-mtl.jpg",
   },
   {
     name: "Le club des loups-garous ( Jeu 🐺 )",
@@ -139,5 +143,6 @@ export const SHOWCASE_CLUBS = [
     themeColor: "blue",
     members: 29,
     line: "« un groupe actif depuis déjà 3 ans pour jouer au loup garou »",
+    image: "/clubs/loups-garous.jpg",
   },
 ] as const;

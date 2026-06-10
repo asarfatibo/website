@@ -12,13 +12,13 @@ import { cities, isCity, isLocale, locales } from "@/lib/i18n";
 
 const CITY_META: Record<string, { title: string; description: string; h1: string }> = {
   montreal: {
-    title: "bubbleOut Montréal — Events, Clubs et sorties près de toi",
+    title: "bubbleOut Montréal | Events, Clubs et sorties près de toi",
     description:
       "Sortir à Montréal et rencontrer du monde autour de ce que tu aimes : Events spontanés, Clubs qui durent, du Plateau au Village. Gratuit, profil vérifié.",
     h1: "Sortir et trouver tes humains à Montréal.",
   },
   paris: {
-    title: "bubbleOut Paris — fonde ton Club, sois dans les premiers",
+    title: "bubbleOut Paris | fonde ton Club, sois dans les premiers",
     description:
       "bubbleOut arrive à Paris. Fonde un des premiers Clubs de ta ville, propose des sorties et fais-toi des amis autour de ce que tu aimes faire. Profil vérifié.",
     h1: "bubbleOut arrive à Paris : les premiers Clubs se créent maintenant.",

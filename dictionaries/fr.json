@@ -1,12 +1,15 @@
 {
   "meta": {
     "home": {
-      "title": "bubbleOut — Events et Clubs locaux à Montréal et Paris",
+      "title": "bubbleOut | Events et Clubs locaux à Montréal et Paris",
       "description": "Des Events spontanés et des Clubs locaux autour de ce que tu aimes faire. Rejoins des humains près de chez toi, à Montréal et à Paris. Gratuit, profil vérifié."
     }
   },
   "header": {
-    "cities": { "montreal": "Montréal", "paris": "Paris" },
+    "cities": {
+      "montreal": "Montréal",
+      "paris": "Paris"
+    },
     "citySwitchLabel": "Choisir ta ville",
     "about": "À propos",
     "langSwitchLabel": "Changer de langue",
@@ -35,8 +38,8 @@
     "montreal": {
       "title": "En ce moment à Montréal",
       "subtitle": "De vrais Events, créés par de vrais humains.",
-      "cta": "Rejoins-les sur l'app",
-      "fallbackTitle": "Les Events du mois dernier à Montréal",
+      "cta": "Rate pas les prochains",
+      "fallbackTitle": "Les Events du mois dernier sur bubbleOut",
       "fallbackSubtitle": "Ça, c'est ce qui s'est passé le mois dernier. Le prochain est peut-être le tien."
     },
     "paris": {
@@ -103,7 +106,7 @@
     "postLabel": "Voir le post Instagram du"
   },
   "trust": {
-    "title": "Ici, tu choisis qui tu rencontres — et autour de quoi.",
+    "title": "Ici, tu choisis qui tu rencontres, et autour de quoi.",
     "points": [
       "Profil vérifié obligatoire : tu sais qui vient.",
       "Ta position exacte n'est jamais partagée.",
@@ -123,7 +126,10 @@
     "contact": "Contact",
     "instagramLabel": "bubbleOut sur Instagram",
     "tiktokLabel": "bubbleOut sur TikTok",
-    "cityLinks": { "montreal": "bubbleOut à Montréal", "paris": "bubbleOut à Paris" },
-    "baseline": "bubbleOut — fait avec soin entre Montréal et Paris"
+    "cityLinks": {
+      "montreal": "bubbleOut à Montréal",
+      "paris": "bubbleOut à Paris"
+    },
+    "baseline": "bubbleOut | fait avec soin entre Montréal et Paris"
   }
 }

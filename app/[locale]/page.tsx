@@ -47,7 +47,7 @@ const PERSONA_PHOTOS = [
 ] as const;
 
 const HOW_SCREENS = [
-  "/assets/mockup-app/french/event.png",
+  "/assets/mockup-app/french/club.png",
   "/assets/mockup-app/french/propose_hangout.png",
   "/assets/mockup-app/french/chat.png",
 ] as const;
@@ -245,18 +245,29 @@ export default async function HomePage({
           {SHOWCASE_CLUBS.map((club) => (
             <li
               key={club.name}
-              className={`rounded-card p-6 transition-transform hover:-translate-y-1 ${accentBg[club.themeColor as Accent]}`}
+              className={`overflow-hidden rounded-card transition-transform hover:-translate-y-1 ${accentBg[club.themeColor as Accent]}`}
             >
-              <span
-                className={`inline-block rounded-cta px-2.5 py-0.5 text-xs font-bold ${accentTag[club.themeColor as Accent]}`}
-              >
-                {club.theme}
-              </span>
-              <h3 className="mt-3 text-lg leading-snug">{club.name}</h3>
-              <p className="mt-1 text-sm text-ink/60">
-                {club.members} {dict.clubs.membersSuffix}
-              </p>
-              <p className="mt-3 text-sm italic text-ink/80">{club.line}</p>
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src={club.image}
+                  alt={`Le Club ${club.name} sur bubbleOut`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 pt-4">
+                <span
+                  className={`inline-block rounded-cta px-2.5 py-0.5 text-xs font-bold ${accentTag[club.themeColor as Accent]}`}
+                >
+                  {club.theme}
+                </span>
+                <h3 className="mt-3 text-lg leading-snug">{club.name}</h3>
+                <p className="mt-1 text-sm text-ink/60">
+                  {club.members} {dict.clubs.membersSuffix}
+                </p>
+                <p className="mt-3 text-sm italic text-ink/80">{club.line}</p>
+              </div>
             </li>
           ))}
         </ul>
