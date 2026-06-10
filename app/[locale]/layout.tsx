@@ -41,8 +41,25 @@ export async function generateMetadata({
         "x-default": "/fr",
       },
     },
+    openGraph: {
+      siteName: "bubbleOut",
+      type: "website",
+      locale: locale === "fr" ? "fr_CA" : "en_CA",
+      url: `/${locale}`,
+      title: dict.meta.home.title,
+      description: dict.meta.home.description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.home.title,
+      description: dict.meta.home.description,
+    },
   };
 }
+
+export const viewport = {
+  themeColor: "#FEF8EF",
+};
 
 export default async function LocaleLayout({
   children,

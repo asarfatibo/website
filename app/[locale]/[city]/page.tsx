@@ -63,6 +63,19 @@ export async function generateMetadata({
       canonical: `/${locale}/${city}`,
       languages: { fr: `/fr/${city}`, en: `/en/${city}`, "x-default": `/fr/${city}` },
     },
+    openGraph: {
+      siteName: "bubbleOut",
+      type: "website",
+      locale: locale === "fr" ? (city === "paris" ? "fr_FR" : "fr_CA") : "en_CA",
+      url: `/${locale}/${city}`,
+      title: page.metaTitle,
+      description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.metaTitle,
+      description,
+    },
   };
 }
 
