@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "home": {
+      "title": "bubbleOut — Events et Clubs locaux à Montréal et Paris",
+      "description": "Des Events spontanés et des Clubs locaux autour de ce que tu aimes faire. Rejoins des humains près de chez toi, à Montréal et à Paris. Gratuit, profil vérifié."
+    }
+  },
+  "header": {
+    "cities": { "montreal": "Montréal", "paris": "Paris" },
+    "citySwitchLabel": "Choisir ta ville",
+    "about": "À propos",
+    "langSwitchLabel": "Changer de langue",
+    "cta": "Télécharger",
+    "ctaLabel": "Télécharger bubbleOut sur l'App Store ou Google Play",
+    "qrTitle": "Scanne, et on se voit dehors.",
+    "qrSubtitle": "Pointe ta caméra sur le code, l'app fait le reste."
+  },
+  "hero": {
+    "h1": "Trouve tes humains à travers ce que tu aimes faire.",
+    "subtitle": "Des Events spontanés, des Clubs qui durent et des chats pour tout organiser. À Montréal, et maintenant à Paris.",
+    "cta": "Télécharger bubbleOut",
+    "reassurance": "Gratuit · Profil vérifié · Ta position exacte reste privée",
+    "appStoreAlt": "Télécharger bubbleOut sur l'App Store",
+    "googlePlayAlt": "Télécharger bubbleOut sur Google Play",
+    "mockupAlt": "L'app bubbleOut ouverte sur le feed des Events à Montréal"
+  },
+  "proof": {
+    "srTitle": "bubbleOut en chiffres",
+    "users": "humains à Montréal",
+    "events": "Events créés ce mois-ci",
+    "rating": "la note moyenne des participants"
+  },
+  "cityModule": {
+    "montreal": {
+      "title": "En ce moment à Montréal",
+      "subtitle": "De vrais Events, créés par de vrais humains.",
+      "cta": "Rejoins-les sur l'app",
+      "fallbackTitle": "Les Events du mois dernier à Montréal",
+      "fallbackSubtitle": "Ça, c'est ce qui s'est passé le mois dernier. Le prochain est peut-être le tien."
+    },
+    "paris": {
+      "title": "Paris, ça commence.",
+      "body": "bubbleOut débarque dans ta ville. Les premiers Clubs se créent en ce moment : running, apéro, jeux, musique. Ceux qui arrivent maintenant donnent le ton de ce que Paris va devenir.",
+      "ctaPrimary": "Fonde ton Club",
+      "ctaSecondary": "Télécharger"
+    }
+  },
+  "how": {
+    "title": "Comment ça marche",
+    "steps": [
+      {
+        "title": "Découvre ce qui se passe autour de toi",
+        "body": "Des Events et des Clubs près de chez toi, selon tes envies."
+      },
+      {
+        "title": "Rejoins, ou propose ton plan",
+        "body": "Un Event te parle ? Demande à rejoindre. Rien ne te tente ? Propose ton plan en 2 minutes."
+      },
+      {
+        "title": "Retrouve tes humains",
+        "body": "Le chat du groupe, les Talks pour voter les prochaines sorties, et des moments qui reviennent."
+      }
+    ]
+  },
+  "clubs": {
+    "title": "Des Clubs qui durent",
+    "intro": "Un Event, c'est un soir. Un Club, c'est ce qui fait que vous vous revoyez.",
+    "membersSuffix": "membres",
+    "cta": "Trouve le tien, ou crée-le"
+  },
+  "personas": {
+    "title": "Reconnais-toi",
+    "cards": [
+      {
+        "title": "Tu viens d'arriver",
+        "body": "Ta communauté locale, dès le jour 1. Commence en observant, personne ne te presse."
+      },
+      {
+        "title": "Ton crew s'est dispersé",
+        "body": "Des humains pour tes mardis ordinaires, pas juste les grandes occasions."
+      },
+      {
+        "title": "Tu rassembles les gens",
+        "body": "Crée ton Club, propose des Events, bâtis ta communauté. C'est toi l'admin."
+      },
+      {
+        "title": "T'as envie de spontané",
+        "body": "Un plan en 2 minutes. Viens une fois, zéro obligation. Si la vibe te parle, t'as trouvé tes gens."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Ici, tu choisis qui tu rencontres — et autour de quoi.",
+    "points": [
+      "Profil vérifié obligatoire : tu sais qui vient.",
+      "Ta position exacte n'est jamais partagée.",
+      "Tu rejoins ce qui te parle, tu quittes quand tu veux. Pas de swipe, pas d'algorithme qui décide pour toi."
+    ]
+  },
+  "finalCta": {
+    "title": "Prêt·e à sortir de ta bulle ?",
+    "cta": "Télécharger bubbleOut",
+    "microcopy": "Gratuit sur iOS et Android.",
+    "qrAlt": "QR code pour télécharger bubbleOut"
+  },
+  "footer": {
+    "about": "À propos",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "contact": "Contact",
+    "instagramLabel": "bubbleOut sur Instagram",
+    "tiktokLabel": "bubbleOut sur TikTok",
+    "cityLinks": { "montreal": "bubbleOut à Montréal", "paris": "bubbleOut à Paris" },
+    "baseline": "bubbleOut — fait avec soin entre Montréal et Paris"
+  }
+}
