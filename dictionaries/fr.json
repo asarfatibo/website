@@ -22,7 +22,8 @@
     "reassurance": "Gratuit · Profil vérifié · Ta position exacte reste privée",
     "appStoreAlt": "Télécharger bubbleOut sur l'App Store",
     "googlePlayAlt": "Télécharger bubbleOut sur Google Play",
-    "mockupAlt": "L'app bubbleOut ouverte sur le feed des Events à Montréal"
+    "mockupAlt": "L'app bubbleOut ouverte sur la découverte des communautés autour de toi",
+    "heroPhotoAlt": "Un groupe d'humains qui pique-niquent ensemble dans un parc"
   },
   "proof": {
     "srTitle": "bubbleOut en chiffres",
@@ -88,6 +89,18 @@
         "body": "Un plan en 2 minutes. Viens une fois, zéro obligation. Si la vibe te parle, t'as trouvé tes gens."
       }
     ]
+  },
+  "reviews": {
+    "title": "Déjà sortis de leur bulle",
+    "ratingLine": "sur l'App Store",
+    "sourceNote": "Avis publiés sur l'App Store, mot pour mot.",
+    "starsLabel": "5 étoiles sur 5"
+  },
+  "instagram": {
+    "title": "On se retrouve sur Instagram",
+    "subtitle": "La vie des Clubs, les recaps d'Events et les plans du moment.",
+    "cta": "Suivre @bubbleout.mtl",
+    "postLabel": "Voir le post Instagram du"
   },
   "trust": {
     "title": "Ici, tu choisis qui tu rencontres — et autour de quoi.",

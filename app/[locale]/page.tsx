@@ -1,23 +1,75 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale } from "@/lib/i18n";
-import { LIVE_STATS, SHOWCASE_CLUBS, SITE_URL, STORE_LINKS } from "@/lib/constants";
+import {
+  APP_RATING,
+  CURATED_EVENTS,
+  DOWNLOAD_LINK,
+  LIVE_STATS,
+  REVIEWS,
+  SHOWCASE_CLUBS,
+  SITE_URL,
+  SOCIAL_LINKS,
+  STORE_LINKS,
+} from "@/lib/constants";
 import { StoreBadges } from "@/components/StoreBadges";
+import instagramPosts from "@/lib/instagram-posts.json";
 
 const ACCENTS = ["blue", "green", "purple", "pink"] as const;
+type Accent = (typeof ACCENTS)[number];
 
-const accentBg: Record<(typeof ACCENTS)[number], string> = {
+const accentBg: Record<Accent, string> = {
   blue: "bg-blue-light/30",
   green: "bg-green-light/30",
   purple: "bg-purple-light/30",
   pink: "bg-pink-light/40",
 };
 
-const accentBar: Record<(typeof ACCENTS)[number], string> = {
+const accentBar: Record<Accent, string> = {
   blue: "bg-blue",
   green: "bg-green",
   purple: "bg-purple",
   pink: "bg-pink",
 };
+
+const accentTag: Record<Accent, string> = {
+  blue: "bg-blue text-white",
+  green: "bg-green text-white",
+  purple: "bg-purple text-white",
+  pink: "bg-pink text-ink",
+};
+
+const PERSONA_PHOTOS = [
+  "/assets/pictures/photo-walk-group.avif",
+  "/assets/pictures/eating-groups.avif",
+  "/assets/pictures/barbecue-party.png",
+  "/assets/pictures/soiree-dehors.png",
+] as const;
+
+const HOW_SCREENS = [
+  "/assets/mockup-app/french/event.png",
+  "/assets/mockup-app/french/propose_hangout.png",
+  "/assets/mockup-app/french/chat.png",
+] as const;
+
+function DownloadButton({ label, light = false }: { label: string; light?: boolean }) {
+  const cls = light
+    ? "rounded-cta bg-white px-8 py-4 text-lg font-bold text-blue transition-transform hover:scale-[1.03]"
+    : "rounded-cta bg-blue px-8 py-4 text-lg font-bold text-white transition-transform hover:scale-[1.03]";
+  return (
+    <a href={DOWNLOAD_LINK} className={`inline-block ${cls}`}>
+      {label}
+    </a>
+  );
+}
+
+function Stars({ label }: { label: string }) {
+  return (
+    <span aria-label={label} role="img" className="text-pink">
+      {"★★★★★"}
+    </span>
+  );
+}
 
 export default async function HomePage({
   params,
@@ -35,8 +87,8 @@ export default async function HomePage({
         "@type": "Organization",
         name: "bubbleOut",
         url: SITE_URL,
-        logo: `${SITE_URL}/brand/logo.svg`,
-        sameAs: [STORE_LINKS.appStore, STORE_LINKS.googlePlay],
+        logo: `${SITE_URL}/assets/logo/logo.svg`,
+        sameAs: [STORE_LINKS.appStore, STORE_LINKS.googlePlay, SOCIAL_LINKS.instagram, SOCIAL_LINKS.tiktok],
       },
       {
         "@type": "MobileApplication",
@@ -44,7 +96,7 @@ export default async function HomePage({
         operatingSystem: "iOS, Android",
         applicationCategory: "SocialNetworkingApplication",
         offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
-        installUrl: STORE_LINKS.appStore,
+        installUrl: DOWNLOAD_LINK,
       },
     ],
   };
@@ -57,139 +109,270 @@ export default async function HomePage({
       />
 
       {/* S2 — Hero */}
-      <section className="mx-auto max-w-6xl px-4 pb-16 pt-14 md:pt-24">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl">{dict.hero.h1}</h1>
-          <p className="mt-6 text-lg md:text-xl">{dict.hero.subtitle}</p>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href={STORE_LINKS.appStore}
-              className="rounded-cta bg-blue px-8 py-4 text-lg font-bold text-white transition-opacity hover:opacity-90"
-            >
-              {dict.hero.cta}
-            </a>
-            <StoreBadges dict={dict} />
+      <section className="overflow-hidden">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-16 pt-14 md:grid-cols-[1.1fr_0.9fr] md:pt-20">
+          <div>
+            <h1 className="text-4xl leading-tight md:text-6xl">{dict.hero.h1}</h1>
+            <p className="mt-6 max-w-xl text-lg md:text-xl">{dict.hero.subtitle}</p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <DownloadButton label={dict.hero.cta} />
+              <StoreBadges dict={dict} />
+            </div>
+            <p className="mt-4 text-sm text-ink/60">{dict.hero.reassurance}</p>
           </div>
-          <p className="mt-4 text-sm text-ink/60">{dict.hero.reassurance}</p>
+
+          <div className="relative mx-auto w-full max-w-sm">
+            <div className="absolute inset-x-6 top-8 bottom-0 rounded-card bg-blue-light/40" aria-hidden="true" />
+            <Image
+              src="/assets/mockup-app/french/find_your_community.png"
+              alt={dict.hero.mockupAlt}
+              width={320}
+              height={650}
+              priority
+              className="relative mx-auto h-auto w-64 rotate-2 drop-shadow-xl md:w-72"
+            />
+            <Image
+              src="/assets/pictures/pique-nique-parc.png"
+              alt={dict.hero.heroPhotoAlt}
+              width={224}
+              height={150}
+              priority
+              className="absolute -left-2 bottom-6 hidden h-auto w-44 -rotate-3 rounded-2xl border-4 border-white object-cover shadow-lg md:block lg:w-56"
+            />
+          </div>
         </div>
-        {/* TODO étape 2 (polish) : mockup téléphone — screenshot du feed réel */}
       </section>
 
       {/* S3 — Preuve sociale */}
-      <section className="border-y border-ink/10 bg-white/40">
+      <section className="border-y border-ink/10 bg-white/50">
         <h2 className="sr-only">{dict.proof.srTitle}</h2>
         <dl className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-10 text-center sm:grid-cols-3">
           <div>
-            <dt className="font-display text-4xl">{LIVE_STATS.usersTotal}</dt>
+            <dt className="font-display text-4xl md:text-5xl">{LIVE_STATS.usersTotal}</dt>
             <dd className="mt-1 text-ink/70">{dict.proof.users}</dd>
           </div>
           <div>
-            <dt className="font-display text-4xl">{LIVE_STATS.events30d}</dt>
+            <dt className="font-display text-4xl md:text-5xl">{LIVE_STATS.events30d}</dt>
             <dd className="mt-1 text-ink/70">{dict.proof.events}</dd>
           </div>
           <div>
-            <dt className="font-display text-4xl">{LIVE_STATS.rating}</dt>
+            <dt className="font-display text-4xl md:text-5xl">{LIVE_STATS.rating}</dt>
             <dd className="mt-1 text-ink/70">{dict.proof.rating}</dd>
           </div>
         </dl>
       </section>
 
-      {/* S4 — Module ville active — TODO étape 4 : module live Events (ISR) + switch ville.
-          En attendant : variante Montréal en fallback statique, sans cartes. */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-3xl md:text-4xl">{dict.cityModule.montreal.title}</h2>
-        <p className="mt-3 text-lg text-ink/70">{dict.cityModule.montreal.subtitle}</p>
-        <div className="mt-8 rounded-card border border-dashed border-ink/20 p-10 text-center text-ink/50">
-          {/* Placeholder grille Events — branchée à l'étape 4 (API/ISR ou JSON curaté) */}
-          Grille d&apos;Events à venir — module live, étape 4
-        </div>
-        <div className="mt-8">
-          <a
-            href={STORE_LINKS.appStore}
-            className="rounded-cta bg-blue px-6 py-3 font-bold text-white transition-opacity hover:opacity-90"
-          >
-            {dict.cityModule.montreal.cta}
-          </a>
+      {/* S4 — Module ville : fallback statique avec les vrais Events de mai.
+          Le module live (Events à venir via API/ISR + switch ville) arrive à l'étape 4. */}
+      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <h2 className="text-3xl md:text-4xl">{dict.cityModule.montreal.fallbackTitle}</h2>
+        <p className="mt-3 text-lg text-ink/70">{dict.cityModule.montreal.fallbackSubtitle}</p>
+        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {CURATED_EVENTS.map((event) => (
+            <li key={event.title}>
+              <a
+                href={DOWNLOAD_LINK}
+                className="group block overflow-hidden rounded-card bg-white/70 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src={event.image}
+                    alt={`Event ${event.title} à ${event.place}, Montréal`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-4">
+                  <span
+                    className={`inline-block rounded-cta px-2.5 py-0.5 text-xs font-bold ${accentTag[event.themeColor as Accent]}`}
+                  >
+                    {event.theme}
+                  </span>
+                  <h3 className="mt-2 text-lg leading-snug">{event.title}</h3>
+                  <p className="mt-1 text-sm text-ink/60">
+                    {event.date} · {event.place}
+                  </p>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-10">
+          <DownloadButton label={dict.cityModule.montreal.cta} />
         </div>
       </section>
 
       {/* S5 — Comment ça marche */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-3xl md:text-4xl">{dict.how.title}</h2>
-        <ol className="mt-10 grid gap-6 md:grid-cols-3">
-          {dict.how.steps.map((step, i) => (
-            <li key={step.title} className="rounded-card bg-white/60 p-6">
-              <div className={`h-1.5 w-12 rounded-full ${accentBar[ACCENTS[i % 4]]}`} aria-hidden="true" />
-              <h3 className="mt-4 text-xl">{step.title}</h3>
-              <p className="mt-2 text-ink/70">{step.body}</p>
-            </li>
-          ))}
-        </ol>
+      <section className="bg-white/50 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl md:text-4xl">{dict.how.title}</h2>
+          <ol className="mt-12 grid gap-10 md:grid-cols-3">
+            {dict.how.steps.map((step, i) => (
+              <li key={step.title} className="flex flex-col">
+                <div className={`mx-auto w-full max-w-56 rounded-card p-4 pb-0 ${accentBg[ACCENTS[i % 4]]}`}>
+                  <Image
+                    src={HOW_SCREENS[i]}
+                    alt=""
+                    width={280}
+                    height={560}
+                    className="mx-auto h-auto w-full rounded-t-2xl object-cover object-top"
+                  />
+                </div>
+                <div className="mt-6 flex items-start gap-3">
+                  <span
+                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-display text-white ${accentBar[ACCENTS[i % 4]]}`}
+                    aria-hidden="true"
+                  >
+                    {i + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-xl">{step.title}</h3>
+                    <p className="mt-2 text-ink/70">{step.body}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
       </section>
 
       {/* S6 — Des Clubs qui durent */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
         <h2 className="text-3xl md:text-4xl">{dict.clubs.title}</h2>
         <p className="mt-3 max-w-2xl text-lg">{dict.clubs.intro}</p>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {SHOWCASE_CLUBS.map((club) => (
-            <li key={club.name} className={`rounded-card p-6 ${accentBg[club.themeColor]}`}>
-              <h3 className="text-lg leading-snug">{club.name}</h3>
+            <li
+              key={club.name}
+              className={`rounded-card p-6 transition-transform hover:-translate-y-1 ${accentBg[club.themeColor as Accent]}`}
+            >
+              <span
+                className={`inline-block rounded-cta px-2.5 py-0.5 text-xs font-bold ${accentTag[club.themeColor as Accent]}`}
+              >
+                {club.theme}
+              </span>
+              <h3 className="mt-3 text-lg leading-snug">{club.name}</h3>
               <p className="mt-1 text-sm text-ink/60">
-                {club.theme} · {club.members} {dict.clubs.membersSuffix}
+                {club.members} {dict.clubs.membersSuffix}
               </p>
               <p className="mt-3 text-sm italic text-ink/80">{club.line}</p>
             </li>
           ))}
         </ul>
-        <div className="mt-8">
-          <a
-            href={STORE_LINKS.appStore}
-            className="rounded-cta bg-blue px-6 py-3 font-bold text-white transition-opacity hover:opacity-90"
-          >
-            {dict.clubs.cta}
-          </a>
+        <div className="mt-10">
+          <DownloadButton label={dict.clubs.cta} />
         </div>
       </section>
 
       {/* S7 — Reconnais-toi */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-3xl md:text-4xl">{dict.personas.title}</h2>
-        <ul className="mt-10 grid gap-6 sm:grid-cols-2">
-          {dict.personas.cards.map((card, i) => (
-            <li key={card.title} className={`rounded-card p-8 ${accentBg[ACCENTS[i % 4]]}`}>
-              <h3 className="text-2xl">{card.title}</h3>
-              <p className="mt-3 text-ink/80">{card.body}</p>
+      <section className="bg-white/50 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl md:text-4xl">{dict.personas.title}</h2>
+          <ul className="mt-10 grid gap-6 sm:grid-cols-2">
+            {dict.personas.cards.map((card, i) => (
+              <li
+                key={card.title}
+                className={`flex gap-5 rounded-card p-6 md:p-8 ${accentBg[ACCENTS[i % 4]]}`}
+              >
+                <Image
+                  src={PERSONA_PHOTOS[i]}
+                  alt=""
+                  width={112}
+                  height={112}
+                  className="hidden h-28 w-28 shrink-0 rounded-2xl object-cover sm:block"
+                />
+                <div>
+                  <h3 className="text-2xl">{card.title}</h3>
+                  <p className="mt-3 text-ink/80">{card.body}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Avis — vrais avis App Store, verbatim */}
+      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <h2 className="text-3xl md:text-4xl">{dict.reviews.title}</h2>
+        <p className="mt-3 flex items-center gap-3 text-lg">
+          <span className="font-display text-2xl">{APP_RATING.score}</span>
+          <Stars label={dict.reviews.starsLabel} />
+          <span className="text-ink/60">{dict.reviews.ratingLine}</span>
+        </p>
+        <ul className="mt-10 grid gap-6 md:grid-cols-3">
+          {REVIEWS.map((review) => (
+            <li key={review.author} className="rounded-card bg-white/70 p-6 shadow-sm">
+              <Stars label={dict.reviews.starsLabel} />
+              <h3 className="mt-3 text-lg">{review.title}</h3>
+              <p className="mt-2 text-ink/80">« {review.text} »</p>
+              <p className="mt-4 text-sm text-ink/50">— {review.author}</p>
             </li>
           ))}
         </ul>
+        <p className="mt-6 text-sm text-ink/50">{dict.reviews.sourceNote}</p>
       </section>
 
       {/* S8 — Réassurance */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="max-w-3xl text-3xl md:text-4xl">{dict.trust.title}</h2>
-        <ul className="mt-8 max-w-2xl space-y-4">
-          {dict.trust.points.map((point) => (
-            <li key={point} className="flex gap-3">
-              <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-green" />
-              <p>{point}</p>
+      <section className="mx-auto max-w-6xl px-4 pb-16 md:pb-20">
+        <div className="rounded-card bg-green-light/25 p-8 md:p-12">
+          <h2 className="max-w-3xl text-3xl md:text-4xl">{dict.trust.title}</h2>
+          <ul className="mt-8 max-w-2xl space-y-4">
+            {dict.trust.points.map((point) => (
+              <li key={point} className="flex gap-3">
+                <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-green" />
+                <p>{point}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Instagram — vrais derniers posts @bubbleout.mtl */}
+      <section className="mx-auto max-w-6xl px-4 pb-16 md:pb-20">
+        <h2 className="text-3xl md:text-4xl">{dict.instagram.title}</h2>
+        <p className="mt-3 text-lg text-ink/70">{dict.instagram.subtitle}</p>
+        <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {instagramPosts.map((post) => (
+            <li key={post.permalink}>
+              <a
+                href={post.permalink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${dict.instagram.postLabel} ${post.date}`}
+                className="group block overflow-hidden rounded-card"
+              >
+                <Image
+                  src={post.image}
+                  alt={post.captionExcerpt}
+                  width={400}
+                  height={400}
+                  className="aspect-square w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
             </li>
           ))}
         </ul>
+        <div className="mt-8">
+          <a
+            href={SOCIAL_LINKS.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-cta border-2 border-ink px-6 py-3 font-bold transition-colors hover:bg-ink hover:text-cream"
+          >
+            <Image src="/assets/socials-icon/instagram-logo-facebook-2-svgrepo-com.svg" alt="" width={20} height={20} />
+            {dict.instagram.cta}
+          </a>
+        </div>
       </section>
 
       {/* S9 — CTA final */}
       <section className="bg-blue">
         <div className="mx-auto max-w-6xl px-4 py-20 text-center">
           <h2 className="text-4xl text-white md:text-5xl">{dict.finalCta.title}</h2>
-          <div className="mt-8 flex flex-col items-center gap-4">
-            <a
-              href={STORE_LINKS.appStore}
-              className="rounded-cta bg-white px-8 py-4 text-lg font-bold text-blue transition-opacity hover:opacity-90"
-            >
-              {dict.finalCta.cta}
-            </a>
-            <StoreBadges dict={dict} variant="dark" />
+          <div className="mt-8 flex flex-col items-center gap-5">
+            <DownloadButton label={dict.finalCta.cta} light />
+            <StoreBadges dict={dict} />
             <p className="text-sm text-white/80">{dict.finalCta.microcopy}</p>
           </div>
         </div>

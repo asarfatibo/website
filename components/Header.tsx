@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/lib/i18n";
-import { STORE_LINKS } from "@/lib/constants";
+import { DOWNLOAD_LINK } from "@/lib/constants";
 
 export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const h = dict.header;
@@ -9,7 +9,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-cream/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link href={`/${locale}`} aria-label="bubbleOut — accueil" className="flex items-center gap-2">
-          <Image src="/brand/wordmark.svg" alt="bubbleOut" width={120} height={28} priority />
+          <Image src="/assets/logo/wordmark.svg" alt="bubbleOut" width={120} height={28} priority className="h-7 w-auto" />
         </Link>
 
         <nav aria-label={h.citySwitchLabel} className="hidden items-center gap-1 text-sm sm:flex">
@@ -42,7 +42,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             {locale === "fr" ? "EN" : "FR"}
           </Link>
           <a
-            href={STORE_LINKS.appStore}
+            href={DOWNLOAD_LINK}
             aria-label={h.ctaLabel}
             className="rounded-cta bg-blue px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90"
           >

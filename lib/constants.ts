@@ -1,10 +1,19 @@
+/*
+  Links source: links_to_use.md.txt (provided 2026-06-10).
+  DOWNLOAD_LINK is the Branch.io smart deeplink — routes to the right store
+  automatically. Use it for EVERY download CTA; the per-store URLs only feed
+  the official badges and JSON-LD.
+*/
+export const DOWNLOAD_LINK = "https://bubbleout.app.link";
+
 export const STORE_LINKS = {
-  appStore: "https://apps.apple.com/fr/app/bubbleout-rencontres-irl/id6741350091",
+  appStore: "https://apps.apple.com/fr/app/bubbleout-sortir-et-se-revoir/id6741350091",
   googlePlay: "https://play.google.com/store/apps/details?id=com.bubbleout.social",
 } as const;
 
 export const SOCIAL_LINKS = {
-  instagram: "https://www.instagram.com/bubbleout.app/",
+  instagram: "https://www.instagram.com/bubbleout.mtl",
+  instagramHandle: "@bubbleout.mtl",
   tiktok: "https://www.tiktok.com/@bubbleout.app",
 } as const;
 
@@ -21,6 +30,80 @@ export const LIVE_STATS = {
   rating: "4,2 / 5",
   snapshotDate: "2026-05-30",
 } as const;
+
+/*
+  App Store rating + reviews — fetched 2026-06-10 from the live App Store
+  page (fr). Reviews are VERBATIM user quotes, never edited, displayed with
+  pseudonym and source. Selection rule: reviews using dating-adjacent
+  vocabulary are not displayed (we never rewrite a user's words).
+*/
+export const APP_RATING = {
+  score: "5 / 5",
+  count: 10,
+  source: "App Store",
+} as const;
+
+export const REVIEWS = [
+  {
+    title: "Top app !",
+    text: "Exactement ce qu'il me fallait. Ça fait plaisir de rencontrer des gens sans prise de tête 👌🏻",
+    author: "Thonksi",
+    stars: 5,
+  },
+  {
+    title: "Merci pour cette appli!!",
+    text: "Meilleure appli sur le marché pour organiser des restos/sorties entre potes",
+    author: "mskh19",
+    stars: 5,
+  },
+  {
+    title: "Intéressant",
+    text: "J'ai pu faire de belles rencontres",
+    author: "LucasMTL.",
+    stars: 5,
+  },
+] as const;
+
+/*
+  Curated past Events — static fallback of the city module until the live
+  API wiring (étape 4). Titles VERBATIM from organizers (live-data.md,
+  curated entities May 2026). Covers are the real event images downloaded
+  from api.bubbleout.fr.
+*/
+export const CURATED_EVENTS = [
+  {
+    title: "Pique Nique Parc Fontaine",
+    date: "24 mai",
+    place: "Parc La Fontaine",
+    theme: "Foodie",
+    themeColor: "green",
+    image: "/events/pique-nique-parc-fontaine.jpg",
+  },
+  {
+    title: "Tournoi de beer-pong",
+    date: "9 mai",
+    place: "Union Française de Montréal",
+    theme: "Vie nocturne",
+    themeColor: "purple",
+    image: "/events/tournoi-beer-pong.jpg",
+  },
+  {
+    title: "Journaling de fin de mois 🌞💛",
+    date: "29 mai",
+    place: "Les Alchimistes Café",
+    theme: "Bien-être",
+    themeColor: "pink",
+    image: "/events/journaling-fin-de-mois.jpg",
+  },
+  {
+    title: "🎤 🎙️ VOIX LIBRE MTL 🔥",
+    date: "2 mai",
+    place: "Parc La Fontaine",
+    theme: "Musique",
+    themeColor: "blue",
+    image: "/events/voix-libre-mtl.jpg",
+  },
+] as const;
 
 /*
   Showcase Clubs — names and descriptions are organizer verbatim (cuts marked
