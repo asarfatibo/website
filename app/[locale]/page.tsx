@@ -148,7 +148,7 @@ export default async function HomePage({
         <h2 className="sr-only">{dict.proof.srTitle}</h2>
         <dl className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-10 text-center sm:grid-cols-3">
           <div>
-            <dt className="font-display text-4xl md:text-5xl">{LIVE_STATS.usersTotal}</dt>
+            <dt className="font-display text-4xl md:text-5xl">{LIVE_STATS.usersDisplay}</dt>
             <dd className="mt-1 text-ink/70">{dict.proof.users}</dd>
           </div>
           <div>

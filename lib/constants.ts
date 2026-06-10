@@ -21,14 +21,18 @@ export const SITE_URL = "https://bubbleout.fr";
 
 /*
   Social proof figures — resolved at build time from the live-data pipeline
-  (marketing/_context/live-data.md, snapshot 2026-05-30). Rule: a missing
-  metric is OMITTED from the page, never estimated. Refresh weekly.
+  (marketing/_context/live-data.md). Rule: a missing metric is OMITTED from
+  the page, never estimated.
+  usersDisplay: union of active Montréal + Paris users (data-fetcher method:
+  deduped, team accounts excluded), floored to the nearest 50 with a "+" —
+  display rounding requested by Alban 2026-06-10, always rounded DOWN.
 */
 export const LIVE_STATS = {
-  usersTotal: 1935,
+  usersMtlParis: 2027,
+  usersDisplay: "2 000+",
   events30d: 42,
   rating: "4,2 / 5",
-  snapshotDate: "2026-05-30",
+  snapshotDate: "2026-06-10",
 } as const;
 
 /*
