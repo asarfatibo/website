@@ -204,5 +204,44 @@
       "awaitRelay": "Paris commence ce chapitre. Le Club de course des Buttes-Chaumont, l'apéro du canal Saint-Martin, la table de jeux du Marais : tout reste à fonder. Et le premier arrivé choisit l'ambiance.",
       "finalSubtitle": "Paris, ça commence. La suite dépend de qui arrive maintenant."
     }
+  },
+  "about": {
+    "metaTitle": "À propos de bubbleOut : la mission derrière l'app",
+    "metaDescription": "bubbleOut est né à Montréal avec une idée simple : que ton envie de sortir trouve toujours ses humains. Notre mission, nos valeurs et la suite à Paris.",
+    "h1": "Pourquoi on a créé bubbleOut",
+    "heroSubline": "On est l'équipe derrière l'app. Voici ce qu'on essaie de construire, et pourquoi.",
+    "missionTitle": "Notre mission",
+    "missionStatement": "Que ton envie de sortir trouve ses humains.",
+    "missionBody": [
+      "bubbleOut, c'est une app sociale locale : des Events spontanés, des Clubs qui durent, et des humains qui se retrouvent en vrai autour de ce qu'ils aiment faire.",
+      "Ta ville est pleine de gens qui aiment les mêmes choses que toi. Le running du dimanche matin, l'apéro qui s'éternise en terrasse. Notre travail, c'est de vous mettre dans la même pièce. Le reste, vous le faites très bien sans nous.",
+      "On a construit l'app autour d'une conviction : un Event, c'est un soir. Un Club, c'est ce qui fait que vous vous revoyez. Alors oui, tu peux proposer un plan en 2 minutes et voir qui est partant. Mais ce qui nous rend fiers, c'est ce qui se passe après : le groupe qui se redonne rendez-vous, qui vote sa prochaine sortie dans les Talks, qui continue de se parler dans le chat. L'app s'efface, le moment reste."
+    ],
+    "valuesTitle": "Quatre choses qu'on ne négocie pas",
+    "values": [
+      {
+        "title": "Authenticité",
+        "body": "Des profils vérifiés, de vraies passions, zéro façade. Tu sais qui tu vas retrouver avant d'arriver."
+      },
+      {
+        "title": "Communauté",
+        "body": "Le cœur de bubbleOut, ce sont les Clubs : des groupes qui vivent dans le temps. On mesure notre réussite au nombre de fois où vous vous revoyez."
+      },
+      {
+        "title": "Autonomie",
+        "body": "C'est toi qui crées. Ton Event, ton Club, tes règles : tu choisis qui rejoint, et autour de quoi. On fournit les outils, tu fais le reste."
+      },
+      {
+        "title": "Inclusion",
+        "body": "Arriver seul·e, parler une autre langue, débarquer dans une ville inconnue : tout le monde commence quelque part. Ici, on te fait une place."
+      }
+    ],
+    "storyTitle": "Né à Montréal. Maintenant Paris.",
+    "storyBody": [
+      "bubbleOut est né à Montréal. C'est là qu'on a vu les premiers Clubs prendre vie : des humains qui courent ensemble le dimanche matin, qui se retrouvent pour un apéro en terrasse ou une partie de loup-garou au Parc La Fontaine. C'est là qu'on a compris qu'on tenait quelque chose : des inconnus qui se croisent à un Event et qui finissent par se revoir chaque semaine.",
+      "Maintenant, on ouvre Paris. Les premiers Clubs parisiens se créent en ce moment, et ceux qui arrivent aujourd'hui donnent le ton de ce que la ville va devenir sur bubbleOut. Montréal nous a prouvé que l'idée tient. Paris écrit le chapitre suivant.",
+      "On est une petite équipe, entre Montréal et Paris, et on fait cette app avec soin."
+    ],
+    "ctaSubline": "Si tout ça te parle, la suite se passe dehors."
   }
 }

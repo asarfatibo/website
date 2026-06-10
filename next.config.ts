@@ -1,6 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    // Legacy URLs from the old Hostinger site (still indexed / linked).
+    return [
+      { source: "/mission", destination: "/fr/a-propos", permanent: true },
+      { source: "/en/mission", destination: "/en/a-propos", permanent: true },
+    ];
+  },
   images: {
     remotePatterns: [
       {
