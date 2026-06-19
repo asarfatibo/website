@@ -19,8 +19,8 @@
     "qrSubtitle": "Pointe ta caméra sur le code, l'app fait le reste."
   },
   "hero": {
-    "h1": "Trouve tes humains à travers ce que tu aimes faire.",
-    "subtitle": "Des Events spontanés, des Clubs qui durent et des chats pour tout organiser. À Montréal, et maintenant à Paris.",
+    "h1": "Trouve des humains à travers ce que tu aimes faire.",
+    "subtitle": "Des Events spontanés, des Clubs qui durent et des Chats pour tout organiser. À Montréal, et maintenant à Paris.",
     "cta": "Télécharger bubbleOut",
     "reassurance": "Gratuit · Profil vérifié · Ta position exacte reste privée",
     "appStoreAlt": "Télécharger bubbleOut sur l'App Store",
@@ -54,34 +54,34 @@
     "steps": [
       {
         "title": "Découvre ce qui se passe autour de toi",
-        "body": "Des Events et des Clubs près de chez toi, selon tes envies."
+        "body": "Des Events et des Clubs près de chez toi, selon tes envies et tes passions."
       },
       {
         "title": "Rejoins, ou propose ton plan",
         "body": "Un Event te parle ? Demande à rejoindre. Rien ne te tente ? Propose ton plan en 2 minutes."
       },
       {
-        "title": "Retrouve tes humains",
-        "body": "Le chat du groupe, les Talks pour voter les prochaines sorties, et des moments qui reviennent."
+        "title": "Retrouve les mêmes humains",
+        "body": "Le Chat du groupe, les Talks pour voter les prochaines sorties, et des moments qui reviennent."
       }
     ]
   },
   "clubs": {
     "title": "Des Clubs qui durent",
-    "intro": "Un Event, c'est un soir. Un Club, c'est ce qui fait que vous vous revoyez.",
+    "intro": "Un Event, c'est une fois. Un Club, c'est ce qui fait que vous vous revoyez.",
     "membersSuffix": "membres",
     "cta": "Trouve le tien, ou crée-le"
   },
   "personas": {
-    "title": "Reconnais-toi",
+    "title": "C'est toi, ça ?",
     "cards": [
       {
         "title": "Tu viens d'arriver",
         "body": "Ta communauté locale, dès le jour 1. Commence en observant, personne ne te presse."
       },
       {
-        "title": "Ton crew s'est dispersé",
-        "body": "Des humains pour tes mardis ordinaires, pas juste les grandes occasions."
+        "title": "Ta team s'est dispersée",
+        "body": "Des humains pour des sorties spontanées, pas juste les grandes occasions."
       },
       {
         "title": "Tu rassembles les gens",
@@ -89,7 +89,7 @@
       },
       {
         "title": "T'as envie de spontané",
-        "body": "Un plan en 2 minutes. Viens une fois, zéro obligation. Si la vibe te parle, t'as trouvé tes gens."
+        "body": "Un plan en 2 minutes. Viens une fois, zéro obligation. Si la vibe te parle, t'es au bon endroit."
       }
     ]
   },
@@ -111,6 +111,22 @@
       "Profil vérifié obligatoire : tu sais qui vient.",
       "Ta position exacte n'est jamais partagée.",
       "Tu rejoins ce qui te parle, tu quittes quand tu veux. Pas de swipe, pas d'algorithme qui décide pour toi."
+    ],
+    "clarityIntro": "En clair :",
+    "isLabel": "bubbleOut, c'est",
+    "is": [
+      "Des Events créés par des humains comme toi",
+      "Des Clubs locaux autour de tes passions",
+      "Des Talks pour proposer des sorties et voter ensemble",
+      "Des Chats pour organiser et papoter avant, pendant, après",
+      "Des sorties en vrai, avec des profils vérifiés"
+    ],
+    "isNotLabel": "bubbleOut, ce n'est pas",
+    "isNot": [
+      "Une app de dating",
+      "Une billetterie sans âme",
+      "Un fil d'actualité qui scrolle sans fin",
+      "Du swipe à l'infini"
     ]
   },
   "finalCta": {
@@ -124,6 +140,7 @@
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "contact": "Contact",
+    "security": "Sécurité",
     "instagramLabel": "bubbleOut sur Instagram",
     "tiktokLabel": "bubbleOut sur TikTok",
     "cityLinks": {
@@ -144,7 +161,7 @@
       "proofUsers": "humains à Montréal",
       "eventsTitle": "Les Events du mois dernier à Montréal",
       "eventsSubtitle": "Ça, c'est ce qui s'est passé le mois dernier, du Parc La Fontaine au Quai de l'Horloge. Le prochain est peut-être le tien.",
-      "eventsCta": "Rate pas les prochains",
+      "eventsCta": "Rejoins-les sur l'app",
       "howSteps": [
         {
           "title": "Découvre ce qui se passe dans ton coin",
@@ -156,26 +173,26 @@
         },
         {
           "title": "Retrouve tes humains",
-          "body": "Le chat du groupe, les Talks pour voter la prochaine sortie. Terrasse en été, café quand il fait -20 : vous vous revoyez."
+          "body": "Le Chat du groupe, les Talks pour voter la prochaine sortie. Terrasse en été, café quand il fait -20 : vous vous revoyez."
         }
       ],
-      "clubsIntro": "Un Event, c'est un soir. Un Club, c'est ce qui fait que vous vous revoyez : un dimanche au parc La Fontaine, un 5 à 7 qui devient rituel. C'est la façon la plus simple de se faire des amis à Montréal : faire des trucs ensemble, souvent.",
+      "clubsIntro": "Un Event, c'est une fois. Un Club, c'est ce qui fait que vous vous revoyez : un dimanche au parc La Fontaine, un 5 à 7 qui devient rituel. C'est la façon la plus simple de se faire des amis à Montréal : faire des trucs ensemble, souvent.",
       "personas": [
         {
           "title": "Tu viens d'arriver à Montréal",
-          "body": "Nouvelle ville, nouveaux repères. Ta communauté locale à partir du jour 1 : commence en observant, personne ne te presse."
+          "body": "Nouvelle ville, zéro repère, et l'hiver qui arrive vite. Trouve ta communauté locale dès le jour 1, du Plateau à Verdun. Commence en observant, personne ne te presse."
         },
         {
-          "title": "Ton crew s'est dispersé",
-          "body": "Des humains pour tes mardis ordinaires, pas juste les soirs de festival."
+          "title": "Ta team s'est dispersée",
+          "body": "Les uns ont déménagé en banlieue, les autres bossent tout le temps. Des humains pour tes mardis ordinaires, pas juste les soirs d'Osheaga ou de Jazz Fest."
         },
         {
           "title": "Tu rassembles les gens",
-          "body": "Crée ton Club, propose des Events, bâtis ta communauté montréalaise. C'est toi l'admin."
+          "body": "Crée ton Club, propose des Events, bâtis ta communauté montréalaise. Un running au mont Royal, un apéro sur le Plateau : c'est toi l'admin."
         },
         {
           "title": "T'as envie de spontané",
-          "body": "Un rayon de soleil en avril, un plan en 2 minutes. Viens une fois, zéro obligation. Si la vibe te parle, t'as trouvé tes gens."
+          "body": "Premier rayon de soleil sur la terrasse, un plan en 2 minutes. Viens une fois, zéro obligation. Si la vibe te parle, t'es au bon endroit."
         }
       ],
       "finalSubtitle": "Montréal sort déjà. Rejoins-la.",
@@ -202,6 +219,46 @@
       "awaitStatClubs": "Clubs actifs",
       "awaitBody": "Des Clubs de course, d'apéro, de jeux qui se retrouvent et se revoient : Club Run MTL, Time to apéritz, Le club des loups-garous ( Jeu 🐺 ). Des humains qui se sont croisés à un Event et qui se revoient depuis.",
       "awaitRelay": "Paris commence ce chapitre. Le Club de course des Buttes-Chaumont, l'apéro du canal Saint-Martin, la table de jeux du Marais : tout reste à fonder. Et le premier arrivé choisit l'ambiance.",
+      "foundTitle": "Fonde le Club que Paris attend",
+      "foundIntro": "Pas besoin d'attendre que quelqu'un crée ton groupe. À Paris, tout est à lancer, et celui qui ouvre le Club choisit l'ambiance. Voilà ce que tu as en main.",
+      "foundMockupAlt": "L'app bubbleOut ouverte sur la création d'un Club",
+      "foundBenefits": [
+        {
+          "title": "C'est toi l'admin",
+          "body": "Public ou privé, tu choisis qui rejoint, le rythme et les règles. Ton Club, tes décisions."
+        },
+        {
+          "title": "Propose, le groupe vote",
+          "body": "Avec les Talks, tes membres proposent des sorties et vous tranchez ensemble. Personne ne porte tout, tout seul."
+        },
+        {
+          "title": "Tout au même endroit",
+          "body": "Le Chat du Club pour caler les Events, partager les photos et garder le lien entre deux sorties."
+        },
+        {
+          "title": "Tu donnes le ton",
+          "body": "Les premiers Clubs définissent ce que Paris devient sur bubbleOut. Arriver maintenant, c'est choisir le terrain."
+        }
+      ],
+      "foundSlotCaption": "L'énergie d'un Club bubbleOut. À Paris, c'est toi qui crées le prochain.",
+      "personas": [
+        {
+          "title": "Tu veux lancer un truc à Paris",
+          "body": "Crée ton Club, propose les premiers Events, donne le ton. République, Canal Saint-Martin, Belleville : à toi de choisir le terrain. C'est toi l'admin."
+        },
+        {
+          "title": "Tu débarques à Paris",
+          "body": "Nouvelle ville, ou nouveau quartier. Trouve une communauté locale sans attendre des mois. Commence en observant, personne ne te presse."
+        },
+        {
+          "title": "Ta team s'est dispersée",
+          "body": "Entre les déménagements et le boulot, on se voit moins. Des humains pour tes mardis ordinaires, pas juste les vacances."
+        },
+        {
+          "title": "T'as envie de spontané",
+          "body": "Un afterwork qui se monte en 2 minutes, un dimanche au bord du canal. Viens une fois, zéro obligation. Si la vibe te parle, t'es au bon endroit."
+        }
+      ],
       "finalSubtitle": "Paris, ça commence. La suite dépend de qui arrive maintenant."
     }
   },
@@ -215,7 +272,7 @@
     "missionBody": [
       "bubbleOut, c'est une app sociale locale : des Events spontanés, des Clubs qui durent, et des humains qui se retrouvent en vrai autour de ce qu'ils aiment faire.",
       "Ta ville est pleine de gens qui aiment les mêmes choses que toi. Le running du dimanche matin, l'apéro qui s'éternise en terrasse. Notre travail, c'est de vous mettre dans la même pièce. Le reste, vous le faites très bien sans nous.",
-      "On a construit l'app autour d'une conviction : un Event, c'est un soir. Un Club, c'est ce qui fait que vous vous revoyez. Alors oui, tu peux proposer un plan en 2 minutes et voir qui est partant. Mais ce qui nous rend fiers, c'est ce qui se passe après : le groupe qui se redonne rendez-vous, qui vote sa prochaine sortie dans les Talks, qui continue de se parler dans le chat. L'app s'efface, le moment reste."
+      "On a construit l'app autour d'une conviction : un Event, c'est une fois. Un Club, c'est ce qui fait que vous vous revoyez. Alors oui, tu peux proposer un plan en 2 minutes et voir qui est partant. Mais ce qui nous rend fiers, c'est ce qui se passe après : le groupe qui se redonne rendez-vous, qui vote sa prochaine sortie dans les Talks, qui continue de se parler dans le Chat. L'app s'efface, le moment reste."
     ],
     "valuesTitle": "Quatre choses qu'on ne négocie pas",
     "values": [
@@ -243,5 +300,251 @@
       "On est une petite équipe, entre Montréal et Paris, et on fait cette app avec soin."
     ],
     "ctaSubline": "Si tout ça te parle, la suite se passe dehors."
+  },
+  "security": {
+    "metaTitle": "Ta sécurité | bubbleOut",
+    "metaDescription": "bubbleOut protège ta vie privée : profil vérifié par biométrie, position exacte jamais partagée, modération active et blocage en un geste. Sors en confiance.",
+    "h1": "Ta sécurité. Notre engagement.",
+    "heroSubline": "Profil vérifié, position secrète, modération active : tu sors en confiance, on s'occupe du reste.",
+    "featuresTitle": "Ce qu'on a construit pour toi",
+    "features": [
+      {
+        "title": "Profil vérifié par biométrie",
+        "body": "Chaque humain sur bubbleOut a complété une vérification biométrique. Tu sais qui tu vas retrouver avant d'arriver.",
+        "imgAlt": "Capture d'écran de la vérification biométrique bubbleOut"
+      },
+      {
+        "title": "Ta position exacte reste secrète",
+        "body": "Les autres voient une zone, pas ton adresse. Personne ne sait où tu habites, ni où tu travailles.",
+        "imgAlt": "Capture d'écran de la protection de la localisation bubbleOut"
+      },
+      {
+        "title": "Contenus interdits retirés",
+        "body": "Notre équipe de modération agit sur les signalements. Les contenus qui n'ont pas leur place ici disparaissent vite.",
+        "imgAlt": "Capture d'écran de la modération de contenus bubbleOut"
+      },
+      {
+        "title": "Bloquer et signaler en deux taps",
+        "body": "Un humain te met mal à l'aise ? Bloque-le, signale-le, en deux taps. L'équipe prend le relais.",
+        "imgAlt": "Capture d'écran du bouton bloquer et signaler bubbleOut"
+      }
+    ],
+    "onlineTipsTitle": "Quelques réflexes en ligne",
+    "onlineTips": [
+      {
+        "title": "Ne partage pas tes infos bancaires",
+        "body": "Aucune raison valable de demander de l'argent sur bubbleOut. Si ça arrive, c'est une arnaque. Signale tout de suite."
+      },
+      {
+        "title": "Prends le temps de te faire une idée",
+        "body": "Tu n'as pas à tout dire dès le départ. Ton adresse, ton lieu de travail, ta routine : ça peut attendre que tu aies confiance."
+      },
+      {
+        "title": "Évite les messages que tu regretterais",
+        "body": "Ce qui est envoyé ne se reprend pas. Prends le temps de connaître quelqu'un avant d'aller plus loin."
+      },
+      {
+        "title": "Signale ce qui cloche",
+        "body": "Comportement menaçant, harcèlement, contenu inapproprié : les outils de signalement sont là pour ça. On lit chaque signal."
+      }
+    ],
+    "irlTipsTitle": "Pour les Events en vrai",
+    "irlTips": [
+      {
+        "title": "Choisis un endroit public",
+        "body": "Café, bar, parc, musée : pour une première fois, préfère les lieux fréquentés. Évite les adresses privées que tu ne connais pas."
+      },
+      {
+        "title": "Préviens quelqu'un",
+        "body": "Un message avec le lieu et l'heure à un proche, c'est deux secondes et ça change tout. Tu peux partager le lien de l'Event directement."
+      },
+      {
+        "title": "Organise ton propre transport",
+        "body": "Viens et repars par tes propres moyens. Tu gardes le contrôle de ton départ."
+      },
+      {
+        "title": "Écoute-toi",
+        "body": "Si quelque chose te semble faux, pars. Tu n'as pas à te justifier, ni à rester par politesse."
+      },
+      {
+        "title": "Surveille ce que tu consommes",
+        "body": "Sache d'où vient ta boisson, garde un œil dessus. Ne laisse jamais un inconnu remplir ton verre."
+      },
+      {
+        "title": "Garde tes affaires avec toi",
+        "body": "Téléphone, portefeuille, papiers : garde-les sur toi, pas posés sur la table."
+      }
+    ],
+    "ctaSubline": "Tu connais les règles. La suite se passe dehors."
+  },
+  "faq": {
+    "metaTitle": "FAQ | Questions fréquentes | bubbleOut",
+    "metaDescription": "Tout ce qu'il faut savoir sur bubbleOut : Events, Clubs, Talks, Chat, Explore, sécurité, disponibilité. Trouve la réponse à ta question en quelques secondes.",
+    "h1": "Comment pouvons-nous t'aider ?",
+    "intro": "Retrouve ici les réponses aux questions les plus fréquentes sur bubbleOut.",
+    "categories": [
+      {
+        "category": "L'application",
+        "items": [
+          {
+            "q": "C'est quoi bubbleOut ?",
+            "a": "bubbleOut est une app sociale locale. Tu découvres des Events autour de toi, tu rejoins des Clubs organisés autour de tes passions, et tu échanges avec les participants dans le Chat de groupe, avant de vous retrouver en vrai. Pas de swipe, pas de fil d'actualité : juste des sorties et des communautés locales."
+          },
+          {
+            "q": "bubbleOut, c'est une app de dating ?",
+            "a": "Non. bubbleOut n'est pas une app de dating. Tu rencontres des gens à travers ce que tu aimes faire : sport, musique, food, sorties culturelles... L'objectif : vivre des moments ensemble, pas trouver l'âme sœur."
+          },
+          {
+            "q": "L'app est gratuite ?",
+            "a": "Oui, l'app est gratuite à télécharger et à utiliser. Un abonnement Premium et des options payantes sont disponibles pour accéder à des fonctionnalités avancées."
+          },
+          {
+            "q": "bubbleOut est disponible sur quelles plateformes ?",
+            "a": "bubbleOut est disponible sur iOS (App Store) et Android (Google Play)."
+          }
+        ]
+      },
+      {
+        "category": "Les Events",
+        "items": [
+          {
+            "q": "C'est quoi un Event sur bubbleOut ?",
+            "a": "Un Event est une sortie proposée par un utilisateur : brunch, sport, soirée, expo, randonnée... Tu choisis le thème, le lieu, la date et la capacité. Il peut être public (visible dans Explore) ou privé (sur invitation)."
+          },
+          {
+            "q": "Comment rejoindre un Event ?",
+            "a": "Trouve l'Event via Explore ou la carte interactive, puis envoie une demande de participation. L'organisateur accepte ou refuse. Une fois accepté·e, tu rejoins le Chat de groupe de l'Event pour échanger avant la sortie."
+          },
+          {
+            "q": "Comment créer un Event ?",
+            "a": "En moins d'une minute. Tu choisis le thème, le lieu, la date, la capacité et la visibilité (public ou privé). Les demandes de participation arrivent directement dans l'app. Tu acceptes ou refuses qui tu veux."
+          },
+          {
+            "q": "Puis-je limiter le nombre de participants à mon Event ?",
+            "a": "Oui. Tu définis une capacité maximale à la création. Si elle est atteinte, tu peux l'augmenter à tout moment depuis les paramètres de l'Event."
+          }
+        ]
+      },
+      {
+        "category": "Les Clubs",
+        "items": [
+          {
+            "q": "C'est quoi un Club sur bubbleOut ?",
+            "a": "Un Club est une communauté locale organisée autour d'une passion : course à pied, jeux de société, techno, foodies, cinéma... Les membres se retrouvent régulièrement via les Events du Club. C'est la différence avec un Event one-shot : un Club vit dans le temps."
+          },
+          {
+            "q": "Comment rejoindre un Club ?",
+            "a": "Trouve-le dans Explore ou via un lien de partage, puis envoie une demande d'adhésion. L'admin du Club valide ou refuse ta demande."
+          },
+          {
+            "q": "Comment créer un Club ?",
+            "a": "Tu renseignes un nom, un thème, une photo de couverture et une localisation. Tu choisis ensuite si le Club est public (visible dans Explore) ou privé (sur lien d'invitation uniquement). Tu es automatiquement admin et tu gères les demandes d'adhésion."
+          },
+          {
+            "q": "C'est quoi les Talks dans un Club ?",
+            "a": "Les Talks sont des micro-sondages internes. Les membres proposent des idées de sorties, tout le monde vote, et les plans qui remontent en tête deviennent des Events. C'est le groupe qui décide de ce qu'il fait."
+          }
+        ]
+      },
+      {
+        "category": "Explore et découverte",
+        "items": [
+          {
+            "q": "Comment fonctionne la découverte d'Events et de Clubs ?",
+            "a": "L'onglet Explore affiche les Events et Clubs dans un rayon de 100 km autour de toi. Les résultats tiennent compte de tes filtres : date, thème, âge des membres, genre, style de vie, valeurs, traits de personnalité. Pas d'algo opaque : tu vois exactement pourquoi un Club ou un Event t'est suggéré."
+          },
+          {
+            "q": "Puis-je filtrer les Events et Clubs par thème ou par date ?",
+            "a": "Oui. Les filtres avancés te permettent de trier par date, thème, mais aussi par profil des membres (âge, genre, style de vie, valeurs, traits de personnalité). Tu affines jusqu'à trouver exactement ce qui te correspond."
+          },
+          {
+            "q": "Il y a une carte pour voir les Events autour de moi ?",
+            "a": "Oui. La carte interactive te montre les Events qui se passent près de toi en temps réel. Tu peux naviguer librement et voir d'un coup d'œil ce qui se passe dans ton quartier ou dans une autre zone."
+          }
+        ]
+      },
+      {
+        "category": "Chat",
+        "items": [
+          {
+            "q": "Comment fonctionne le Chat sur bubbleOut ?",
+            "a": "Chaque Event a son propre Chat de groupe, accessible dès que tu es accepté·e. Tu peux y échanger des messages, des photos, des vocaux et des GIFs avec tous les participants, avant, pendant et après la sortie."
+          },
+          {
+            "q": "Peut-on écrire en privé à quelqu'un ?",
+            "a": "Oui. En dehors des chats de groupe, tu peux envoyer un message privé à n'importe quel membre bubbleOut."
+          }
+        ]
+      },
+      {
+        "category": "Sécurité et profil",
+        "items": [
+          {
+            "q": "Comment bubbleOut vérifie-t-il les profils ?",
+            "a": "bubbleOut impose une vérification de profil obligatoire pour chaque compte. Aucun profil non vérifié ne peut utiliser les fonctionnalités interactives de l'app (rejoindre un Event, un Club, envoyer un message...). Cette étape garantit que tu interagis avec de vraies personnes."
+          },
+          {
+            "q": "Ma position exacte est visible par les autres membres ?",
+            "a": "Non. bubbleOut utilise ta localisation pour te montrer les Events et Clubs autour de toi, mais ta position exacte n'est jamais communiquée aux autres membres."
+          }
+        ]
+      },
+      {
+        "category": "Disponibilité",
+        "items": [
+          {
+            "q": "bubbleOut est disponible dans quelles villes ?",
+            "a": "bubbleOut est disponible à Montréal et à Paris. D'autres villes arrivent prochainement."
+          },
+          {
+            "q": "Je n'habite pas à Montréal ni à Paris. Puis-je utiliser bubbleOut ?",
+            "a": "L'app fonctionne partout, mais la communauté est aujourd'hui concentrée à Montréal et Paris. Si tu veux lancer bubbleOut dans ta ville, contacte-nous : on cherche des ambassadeurs locaux."
+          }
+        ]
+      }
+    ],
+    "ctaTitle": "Tu as encore une question ?",
+    "ctaBody": "Notre équipe répond en général sous 24 h.",
+    "ctaButton": "Envoyer un message"
+  },
+  "contact": {
+    "metaTitle": "Contactez-nous | bubbleOut",
+    "metaDescription": "Une question, un problème ou juste envie de dire bonjour ? Envoie-nous un message.",
+    "h1": "Envoyer une demande",
+    "introPre": "Tu peux utiliser ce formulaire ou nous envoyer un email directement à ",
+    "form": {
+      "subjectLabel": "Objet",
+      "emailLabel": "Adresse e-mail",
+      "messageLabel": "Message",
+      "submit": "Envoyer",
+      "submitting": "Envoi…",
+      "mailFrom": "De : ",
+      "sentTitle": "Message préparé !",
+      "sentBody": "Ton email a été ouvert dans ton application mail. Clique sur « Envoyer » pour confirmer.",
+      "noMailConfigured": "Pas d'application mail configurée ?",
+      "sendAnother": "Envoyer un autre message",
+      "errorPrefix": "Une erreur est survenue. Contacte-nous directement à "
+    }
+  },
+  "feedback": {
+    "metaTitle": "Nous écrire | bubbleOut",
+    "metaDescription": "Partage tes suggestions, remontées ou idées pour améliorer bubbleOut.",
+    "h1": "Envoyer un feedback",
+    "introPre": "Tu peux utiliser cette rubrique ou nous envoyer un email directement à ",
+    "form": {
+      "emailLabel": "Email",
+      "emailPlaceholder": "Pour pouvoir te re-contacter au même sujet",
+      "messageLabel": "Message",
+      "messagePlaceholder": "On t'écoute !",
+      "submit": "Envoyer",
+      "submitting": "Envoi…",
+      "mailSubject": "Feedback bubbleOut",
+      "mailFrom": "De : ",
+      "sentTitle": "Merci pour ton feedback !",
+      "sentBody": "Ton email a été ouvert dans ton application mail. Clique sur « Envoyer » pour confirmer.",
+      "noMailConfigured": "Pas d'application mail configurée ?",
+      "sendAnother": "Envoyer un autre message",
+      "errorPrefix": "Une erreur est survenue. Contacte-nous directement à "
+    }
   }
 }

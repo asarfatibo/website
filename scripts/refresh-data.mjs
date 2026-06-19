@@ -24,10 +24,16 @@ const TEAM_IDS = [
 ];
 
 const SHOWCASE_CLUB_NAMES = [
+  // Home showcase
   "Time to apéritz",
   "MTL Sound Club 🪩",
   "Club Run MTL",
   "Le club des loups-garous ( Jeu 🐺 )",
+  // /montreal showcase (distinct set)
+  "Beach Volley mtl 🏐",
+  "Be.u Community",
+  "club techno rave",
+  "Vin sur Vin Mtl",
 ];
 
 const OUT = "lib/live-data.json";

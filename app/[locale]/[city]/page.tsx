@@ -6,8 +6,8 @@ import {
   CURATED_EVENTS,
   DOWNLOAD_LINK,
   LIVE_STATS,
+  MONTREAL_SHOWCASE_CLUBS,
   PARIS_LAUNCHED,
-  SHOWCASE_CLUBS,
   SITE_URL,
   SOCIAL_LINKS,
   STORE_LINKS,
@@ -16,7 +16,7 @@ import { StoreBadges } from "@/components/StoreBadges";
 import { DownloadButton } from "@/components/ui";
 import { EventsGrid } from "@/components/EventsGrid";
 import { getUpcomingMontrealEvents, type EventCard } from "@/lib/events";
-import { ACCENTS, accentBar, accentBg, accentTag, type Accent } from "@/lib/theme";
+import { ACCENTS, accentBg, accentTag, type Accent } from "@/lib/theme";
 
 // ISR: the Montréal Events grid refreshes every hour without a rebuild.
 export const revalidate = 3600;
@@ -27,14 +27,11 @@ export const revalidate = 3600;
   - marketing/website/copy/2026-06-10-paris.md     (pioneer framing, launch toggle)
 */
 
-// Montréal: cut chosen for its geo anchor — different from the home cut, still verbatim.
-const LOUPS_GAROUS_MTL_LINE =
-  "« Nous nous réunissons les dimanches après-midi au Parc La Fontaine quand il fait beau »";
-
-const MTL_HOW_SCREENS = [
-  "/assets/mockup-app/french/event.png",
-  "/assets/mockup-app/french/propose_hangout.png",
-  "/assets/mockup-app/french/chat.png",
+// Galerie /paris — visuels lifestyle (pré-lancement, swap-ables par de vrais visuels Paris).
+const PARIS_GALLERY = [
+  "/assets/pictures/paris/selfie-friends.jpeg",
+  "/assets/pictures/paris/sport-team.avif",
+  "/assets/pictures/paris/painting-group.avif",
 ] as const;
 
 export function generateStaticParams() {
@@ -150,7 +147,7 @@ function MontrealPage({ dict, liveEvents }: { dict: Dict; liveEvents: EventCard[
           <div className="relative mx-auto w-full max-w-sm">
             <div className="absolute inset-x-6 top-8 bottom-0 rounded-card bg-green-light/40" aria-hidden="true" />
             <Image
-              src="/assets/mockup-app/french/event.png"
+              src="/assets/mockup-app/french/club.png"
               alt={page.heroMockupAlt}
               width={320}
               height={650}
@@ -200,46 +197,12 @@ function MontrealPage({ dict, liveEvents }: { dict: Dict; liveEvents: EventCard[
         </div>
       </section>
 
-      {/* Comment ça marche — version montréalaise */}
-      <section className="bg-white/50 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-3xl md:text-4xl">{dict.how.title}</h2>
-          <ol className="mt-12 grid gap-10 md:grid-cols-3">
-            {page.howSteps.map((step, i) => (
-              <li key={step.title} className="flex flex-col">
-                <div className={`mx-auto w-full max-w-56 rounded-card p-4 pb-0 ${accentBg[ACCENTS[i % 4]]}`}>
-                  <Image
-                    src={MTL_HOW_SCREENS[i]}
-                    alt=""
-                    width={280}
-                    height={560}
-                    className="mx-auto h-auto w-full rounded-t-2xl object-cover object-top"
-                  />
-                </div>
-                <div className="mt-6 flex items-start gap-3">
-                  <span
-                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-display text-white ${accentBar[ACCENTS[i % 4]]}`}
-                    aria-hidden="true"
-                  >
-                    {i + 1}
-                  </span>
-                  <div>
-                    <h3 className="text-xl">{step.title}</h3>
-                    <p className="mt-2 text-ink/70">{step.body}</p>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       {/* Clubs MTL */}
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
         <h2 className="text-3xl md:text-4xl">{dict.clubs.title}</h2>
         <p className="mt-3 max-w-3xl text-lg">{page.clubsIntro}</p>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {SHOWCASE_CLUBS.map((club) => (
+          {MONTREAL_SHOWCASE_CLUBS.map((club) => (
             <li
               key={club.name}
               className={`overflow-hidden rounded-card transition-transform hover:-translate-y-1 ${accentBg[club.themeColor as Accent]}`}
@@ -261,9 +224,7 @@ function MontrealPage({ dict, liveEvents }: { dict: Dict; liveEvents: EventCard[
                 <p className="mt-1 text-sm text-ink/60">
                   {club.members} {dict.clubs.membersSuffix}
                 </p>
-                <p className="mt-3 text-sm italic text-ink/80">
-                  {club.name.startsWith("Le club des loups-garous") ? LOUPS_GAROUS_MTL_LINE : club.line}
-                </p>
+                <p className="mt-3 text-sm italic text-ink/80">{club.line}</p>
               </div>
             </li>
           ))}
@@ -288,7 +249,6 @@ function MontrealPage({ dict, liveEvents }: { dict: Dict; liveEvents: EventCard[
         </div>
       </section>
 
-      <TrustSection dict={dict} />
       <FinalCta dict={dict} subtitle={page.finalSubtitle} />
     </>
   );
@@ -300,8 +260,7 @@ function ParisPage({ dict }: { dict: Dict }) {
   const page = dict.cityPages.paris;
   const h1 = PARIS_LAUNCHED ? page.h1Live : page.h1Pre;
   const subtitle = PARIS_LAUNCHED ? page.heroSubtitleLive : page.heroSubtitlePre;
-  // Organisateur first (exigence spec) — reorder the shared persona cards.
-  const personaOrder = [2, 0, 1, 3] as const;
+  // Organisateur first (exigence spec) — les personas parisiennes sont déjà écrites dans cet ordre.
   const personaAccents: Accent[] = ["purple", "blue", "green", "pink"];
 
   return (
@@ -324,7 +283,7 @@ function ParisPage({ dict }: { dict: Dict }) {
           <div className="relative mx-auto w-full max-w-sm">
             <div className="absolute inset-x-6 top-8 bottom-0 rounded-card bg-purple-light/40" aria-hidden="true" />
             <Image
-              src="/assets/mockup-app/french/club.png"
+              src="/assets/mockup-app/french/event-club.png"
               alt={page.heroMockupAlt}
               width={320}
               height={650}
@@ -332,7 +291,7 @@ function ParisPage({ dict }: { dict: Dict }) {
               className="relative mx-auto h-auto w-64 rotate-2 drop-shadow-xl md:w-72"
             />
             <Image
-              src="/assets/pictures/amis-allonges-par-terre.avif"
+              src="/assets/pictures/echec-game-team.avif"
               alt={page.heroPhotoAlt}
               width={224}
               height={150}
@@ -371,70 +330,73 @@ function ParisPage({ dict }: { dict: Dict }) {
         </div>
       </section>
 
-      {/* Comment ça marche — identique à la home */}
+      {/* Fonder un Club — bénéfices pour l'Organisateur (le pionnier dont Paris a besoin en premier) */}
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-        <h2 className="text-3xl md:text-4xl">{dict.how.title}</h2>
-        <ol className="mt-12 grid gap-10 md:grid-cols-3">
-          {dict.how.steps.map((step, i) => (
-            <li key={step.title} className="flex items-start gap-3">
-              <span
-                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-display text-white ${accentBar[ACCENTS[i % 4]]}`}
-                aria-hidden="true"
-              >
-                {i + 1}
-              </span>
-              <div>
-                <h3 className="text-xl">{step.title}</h3>
-                <p className="mt-2 text-ink/70">{step.body}</p>
-              </div>
+        <h2 className="text-3xl md:text-4xl">{page.foundTitle}</h2>
+        <p className="mt-3 max-w-2xl text-lg text-ink/80">{page.foundIntro}</p>
+        <div className="mt-10 grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative mx-auto w-full max-w-xs">
+            <div className="absolute inset-x-6 top-8 bottom-0 rounded-card bg-purple-light/40" aria-hidden="true" />
+            <Image
+              src="/assets/mockup-app/french/club.png"
+              alt={page.foundMockupAlt}
+              width={300}
+              height={610}
+              className="relative mx-auto h-auto w-60 rotate-2 drop-shadow-xl"
+            />
+          </div>
+          <ul className="grid gap-6 sm:grid-cols-2">
+            {page.foundBenefits.map((benefit, i) => (
+              <li key={benefit.title} className={`rounded-card p-6 ${accentBg[personaAccents[i]]}`}>
+                <h3 className="text-xl">{benefit.title}</h3>
+                <p className="mt-2 text-ink/80">{benefit.body}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="mt-10">
+          <DownloadButton label={page.ctaPrimary} />
+          <p className="mt-3 text-sm text-ink/60">{page.ctaMicrocopy}</p>
+        </div>
+
+        {/* Galerie lifestyle — l'énergie d'un Club (visuels swap-ables par de vrais visuels Paris) */}
+        <p className="mt-14 text-center text-ink/70">{page.foundSlotCaption}</p>
+        <ul className="mt-6 grid gap-6 sm:grid-cols-3">
+          {PARIS_GALLERY.map((src) => (
+            <li key={src} className="overflow-hidden rounded-card">
+              <Image
+                src={src}
+                alt=""
+                width={400}
+                height={300}
+                className="aspect-[4/3] w-full object-cover"
+              />
             </li>
           ))}
-        </ol>
+        </ul>
       </section>
 
-      {/* Reconnais-toi — Organisateur en premier */}
+      {/* C'est toi, ça ? — personas parisiennes, Organisateur en premier */}
       <section className="bg-white/50 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl md:text-4xl">{dict.personas.title}</h2>
           <ul className="mt-10 grid gap-6 sm:grid-cols-2">
-            {personaOrder.map((cardIndex, i) => {
-              const card = dict.personas.cards[cardIndex];
-              return (
-                <li key={card.title} className={`rounded-card p-6 md:p-8 ${accentBg[personaAccents[i]]}`}>
-                  <h3 className="text-2xl">{card.title}</h3>
-                  <p className="mt-3 text-ink/80">{card.body}</p>
-                </li>
-              );
-            })}
+            {page.personas.map((card, i) => (
+              <li key={card.title} className={`rounded-card p-6 md:p-8 ${accentBg[personaAccents[i]]}`}>
+                <h3 className="text-2xl">{card.title}</h3>
+                <p className="mt-3 text-ink/80">{card.body}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
 
-      <TrustSection dict={dict} />
       <FinalCta dict={dict} subtitle={page.finalSubtitle} ctaLabel={page.ctaPrimary} />
     </>
   );
 }
 
 /* ─── Shared sections ─── */
-
-function TrustSection({ dict }: { dict: Dict }) {
-  return (
-    <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-      <div className="rounded-card bg-green-light/25 p-8 md:p-12">
-        <h2 className="max-w-3xl text-3xl md:text-4xl">{dict.trust.title}</h2>
-        <ul className="mt-8 max-w-2xl space-y-4">
-          {dict.trust.points.map((point) => (
-            <li key={point} className="flex gap-3">
-              <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-green" />
-              <p>{point}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-}
 
 function FinalCta({
   dict,

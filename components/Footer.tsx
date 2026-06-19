@@ -11,15 +11,21 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <Link href={`/${locale}/a-propos`} className="hover:underline">
             {f.about}
           </Link>
-          <a href="/privacy-policy" className="hover:underline">
+          <Link href={`/${locale}/politique-de-confidentialite`} className="hover:underline">
             {f.privacy}
-          </a>
-          <a href="/terms-and-conditions" className="hover:underline">
+          </Link>
+          <Link href={`/${locale}/conditions-d-utilisations`} className="hover:underline">
             {f.terms}
-          </a>
-          <a href="mailto:contact@bubbleout.fr" className="hover:underline">
+          </Link>
+          <Link href={`/${locale}/contactez-nous`} className="hover:underline">
             {f.contact}
-          </a>
+          </Link>
+          <Link href={`/${locale}/securite`} className="hover:underline">
+            {f.security}
+          </Link>
+          <Link href={`/${locale}/faq`} className="hover:underline">
+            FAQ
+          </Link>
           <a href={SOCIAL_LINKS.instagram} aria-label={f.instagramLabel} className="hover:underline">
             Instagram
           </a>

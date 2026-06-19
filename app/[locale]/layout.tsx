@@ -7,11 +7,10 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "../globals.css";
 
-// Brand display font — Quaria Extra Bold.
-// TODO before go-live: confirm the web-embedding license (open question,
-// spec §6) and convert to woff2 for weight savings.
+// Brand display font — Quaria Extra Bold (woff2 for weight savings).
+// TODO before go-live: confirm the web-embedding license (open question, spec §6).
 const quaria = localFont({
-  src: "../fonts/QuariaDisplay-ExtraBold.ttf",
+  src: "../fonts/QuariaDisplay-ExtraBold.woff2",
   variable: "--font-quaria",
   display: "swap",
   weight: "800",

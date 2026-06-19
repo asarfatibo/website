@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "bubbleOut | Events et Clubs locaux à Montréal et Paris",
-      "description": "Des Events spontanés et des Clubs locaux autour de ce que tu aimes faire. Rejoins des humains près de chez toi, à Montréal et à Paris. Gratuit, profil vérifié."
+      "title": "bubbleOut | Local Events & Clubs in Montréal & Paris",
+      "description": "Spontaneous Events and local Clubs built around the things you love. Meet people near you, in Montréal and Paris. Free, with a verified profile."
     }
   },
   "header": {
@@ -10,238 +10,541 @@
       "montreal": "Montréal",
       "paris": "Paris"
     },
-    "citySwitchLabel": "Choisir ta ville",
-    "about": "À propos",
-    "langSwitchLabel": "Changer de langue",
-    "cta": "Télécharger",
-    "ctaLabel": "Télécharger bubbleOut sur l'App Store ou Google Play",
-    "qrTitle": "Scanne, et on se voit dehors.",
-    "qrSubtitle": "Pointe ta caméra sur le code, l'app fait le reste."
+    "citySwitchLabel": "Choose your city",
+    "about": "About",
+    "langSwitchLabel": "Change language",
+    "cta": "Download",
+    "ctaLabel": "Download bubbleOut on the App Store or Google Play",
+    "qrTitle": "Scan it, and we'll see you outside.",
+    "qrSubtitle": "Point your camera at the code, the app does the rest."
   },
   "hero": {
-    "h1": "Trouve tes humains à travers ce que tu aimes faire.",
-    "subtitle": "Des Events spontanés, des Clubs qui durent et des chats pour tout organiser. À Montréal, et maintenant à Paris.",
-    "cta": "Télécharger bubbleOut",
-    "reassurance": "Gratuit · Profil vérifié · Ta position exacte reste privée",
-    "appStoreAlt": "Télécharger bubbleOut sur l'App Store",
-    "googlePlayAlt": "Télécharger bubbleOut sur Google Play",
-    "mockupAlt": "L'app bubbleOut ouverte sur la découverte des communautés autour de toi",
-    "heroPhotoAlt": "Un groupe d'humains qui pique-niquent ensemble dans un parc"
+    "h1": "Find your people through what you love doing.",
+    "subtitle": "Spontaneous Events, Clubs that last, and Chats to organize it all. In Montréal, and now in Paris.",
+    "cta": "Download bubbleOut",
+    "reassurance": "Free · Verified profile · Your exact location stays private",
+    "appStoreAlt": "Download bubbleOut on the App Store",
+    "googlePlayAlt": "Download bubbleOut on Google Play",
+    "mockupAlt": "The bubbleOut app open on discovering communities around you",
+    "heroPhotoAlt": "A group of people having a picnic together in a park"
   },
   "proof": {
-    "srTitle": "bubbleOut en chiffres",
-    "users": "humains utilisent bubbleOut",
-    "events": "Events créés ce mois-ci",
-    "rating": "la note moyenne des participants"
+    "srTitle": "bubbleOut in numbers",
+    "users": "people use bubbleOut",
+    "events": "Events created this month",
+    "rating": "average rating from members"
   },
   "cityModule": {
     "montreal": {
-      "title": "En ce moment à Montréal",
-      "subtitle": "De vrais Events, créés par de vrais humains.",
-      "cta": "Rate pas les prochains",
-      "fallbackTitle": "Les Events du mois dernier sur bubbleOut",
-      "fallbackSubtitle": "Ça, c'est ce qui s'est passé le mois dernier. Le prochain est peut-être le tien."
+      "title": "Right now in Montréal",
+      "subtitle": "Real Events, created by real people.",
+      "cta": "Don't miss the next ones",
+      "fallbackTitle": "Last month's Events on bubbleOut",
+      "fallbackSubtitle": "This is what happened last month. The next one might be yours."
     },
     "paris": {
-      "title": "Paris, ça commence.",
-      "body": "bubbleOut débarque dans ta ville. Les premiers Clubs se créent en ce moment : running, apéro, jeux, musique. Ceux qui arrivent maintenant donnent le ton de ce que Paris va devenir.",
-      "ctaPrimary": "Fonde ton Club",
-      "ctaSecondary": "Télécharger"
+      "title": "Paris is just getting started.",
+      "body": "bubbleOut is landing in your city. The first Clubs are forming right now: running, drinks, games, music. The people who show up now set the tone for what Paris becomes.",
+      "ctaPrimary": "Start your Club",
+      "ctaSecondary": "Download"
     }
   },
   "how": {
-    "title": "Comment ça marche",
+    "title": "How it works",
     "steps": [
       {
-        "title": "Découvre ce qui se passe autour de toi",
-        "body": "Des Events et des Clubs près de chez toi, selon tes envies."
+        "title": "Discover what's happening around you",
+        "body": "Events and Clubs near you, matched to what you're into."
       },
       {
-        "title": "Rejoins, ou propose ton plan",
-        "body": "Un Event te parle ? Demande à rejoindre. Rien ne te tente ? Propose ton plan en 2 minutes."
+        "title": "Join, or propose your own plan",
+        "body": "An Event speaks to you? Ask to join. Nothing tempting? Propose your own plan in 2 minutes."
       },
       {
-        "title": "Retrouve tes humains",
-        "body": "Le chat du groupe, les Talks pour voter les prochaines sorties, et des moments qui reviennent."
+        "title": "See the same people again",
+        "body": "The group Chat, Talks to vote on the next outings, and moments that keep coming back."
       }
     ]
   },
   "clubs": {
-    "title": "Des Clubs qui durent",
-    "intro": "Un Event, c'est un soir. Un Club, c'est ce qui fait que vous vous revoyez.",
-    "membersSuffix": "membres",
-    "cta": "Trouve le tien, ou crée-le"
+    "title": "Clubs that last",
+    "intro": "An Event happens once. A Club is what brings you back together.",
+    "membersSuffix": "members",
+    "cta": "Find yours, or start one"
   },
   "personas": {
-    "title": "Reconnais-toi",
+    "title": "Sound like you?",
     "cards": [
       {
-        "title": "Tu viens d'arriver",
-        "body": "Ta communauté locale, dès le jour 1. Commence en observant, personne ne te presse."
+        "title": "You just moved here",
+        "body": "Your local community, from day one. Start by watching, nobody's rushing you."
       },
       {
-        "title": "Ton crew s'est dispersé",
-        "body": "Des humains pour tes mardis ordinaires, pas juste les grandes occasions."
+        "title": "Your crew drifted apart",
+        "body": "People for spontaneous outings, not just the big occasions."
       },
       {
-        "title": "Tu rassembles les gens",
-        "body": "Crée ton Club, propose des Events, bâtis ta communauté. C'est toi l'admin."
+        "title": "You bring people together",
+        "body": "Create your Club, propose Events, build your community. You're the admin."
       },
       {
-        "title": "T'as envie de spontané",
-        "body": "Un plan en 2 minutes. Viens une fois, zéro obligation. Si la vibe te parle, t'as trouvé tes gens."
+        "title": "You're after something spontaneous",
+        "body": "A plan in 2 minutes. Come once, zero obligation. If the vibe clicks, you're in the right place."
       }
     ]
   },
   "reviews": {
-    "title": "Déjà sortis de leur bulle",
-    "ratingLine": "sur l'App Store",
-    "sourceNote": "Avis publiés sur l'App Store, mot pour mot.",
-    "starsLabel": "5 étoiles sur 5"
+    "title": "Already out of their bubble",
+    "ratingLine": "on the App Store",
+    "sourceNote": "Reviews published on the App Store, word for word.",
+    "starsLabel": "5 stars out of 5"
   },
   "instagram": {
-    "title": "On se retrouve sur Instagram",
-    "subtitle": "La vie des Clubs, les recaps d'Events et les plans du moment.",
-    "cta": "Suivre @bubbleout.mtl",
-    "postLabel": "Voir le post Instagram du"
+    "title": "Find us on Instagram",
+    "subtitle": "Club life, Event recaps, and what's happening right now.",
+    "cta": "Follow @bubbleout.mtl",
+    "postLabel": "See the Instagram post from"
   },
   "trust": {
-    "title": "Ici, tu choisis qui tu rencontres, et autour de quoi.",
+    "title": "Here, you choose who you meet, and what you meet around.",
     "points": [
-      "Profil vérifié obligatoire : tu sais qui vient.",
-      "Ta position exacte n'est jamais partagée.",
-      "Tu rejoins ce qui te parle, tu quittes quand tu veux. Pas de swipe, pas d'algorithme qui décide pour toi."
+      "Verified profile required: you know who's coming.",
+      "Your exact location is never shared.",
+      "You join what speaks to you, you leave whenever you want. No swiping, no algorithm deciding for you."
+    ],
+    "clarityIntro": "In short:",
+    "isLabel": "bubbleOut is",
+    "is": [
+      "Events created by people like you",
+      "Local Clubs around what you love",
+      "Talks to propose outings and vote together",
+      "Chats to organize and catch up before, during, after",
+      "Real outings, with verified profiles"
+    ],
+    "isNotLabel": "bubbleOut is not",
+    "isNot": [
+      "A dating app",
+      "A soulless ticketing platform",
+      "An endless scrolling feed",
+      "Endless swiping"
     ]
   },
   "finalCta": {
-    "title": "Prêt·e à sortir de ta bulle ?",
-    "cta": "Télécharger bubbleOut",
-    "microcopy": "Gratuit sur iOS et Android.",
-    "qrAlt": "QR code pour télécharger bubbleOut"
+    "title": "Ready to step out of your bubble?",
+    "cta": "Download bubbleOut",
+    "microcopy": "Free on iOS and Android.",
+    "qrAlt": "QR code to download bubbleOut"
   },
   "footer": {
-    "about": "À propos",
-    "privacy": "Politique de confidentialité",
-    "terms": "Conditions d'utilisation",
+    "about": "About",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
     "contact": "Contact",
-    "instagramLabel": "bubbleOut sur Instagram",
-    "tiktokLabel": "bubbleOut sur TikTok",
+    "security": "Safety",
+    "instagramLabel": "bubbleOut on Instagram",
+    "tiktokLabel": "bubbleOut on TikTok",
     "cityLinks": {
-      "montreal": "bubbleOut à Montréal",
-      "paris": "bubbleOut à Paris"
+      "montreal": "bubbleOut in Montréal",
+      "paris": "bubbleOut in Paris"
     },
-    "baseline": "bubbleOut | fait avec soin entre Montréal et Paris"
+    "baseline": "bubbleOut | made with care between Montréal and Paris"
   },
   "cityPages": {
     "montreal": {
-      "metaTitle": "bubbleOut Montréal | Events, Clubs et sorties près de toi",
-      "metaDescription": "Sortir à Montréal et rencontrer du monde autour de ce que tu aimes : Events spontanés, Clubs qui durent, du Plateau au Village. Gratuit, profil vérifié.",
-      "h1": "Sortir et trouver tes humains à Montréal.",
-      "heroSubtitle": "Des Events spontanés et des Clubs qui durent, du Plateau au Village. {users} humains sortent déjà ensemble ici.",
-      "heroMockupAlt": "L'app bubbleOut ouverte sur un Event à Montréal",
-      "heroPhotoAlt": "Un groupe d'humains réunis à un Event bubbleOut à Montréal",
-      "proofSrTitle": "Montréal en chiffres",
-      "proofUsers": "humains à Montréal",
-      "eventsTitle": "Les Events du mois dernier à Montréal",
-      "eventsSubtitle": "Ça, c'est ce qui s'est passé le mois dernier, du Parc La Fontaine au Quai de l'Horloge. Le prochain est peut-être le tien.",
-      "eventsCta": "Rate pas les prochains",
+      "metaTitle": "bubbleOut Montréal | Events, Clubs & outings near you",
+      "metaDescription": "Go out in Montréal and meet people around what you love: spontaneous Events, Clubs that last, from the Plateau to the Village. Free, verified profile.",
+      "h1": "Go out and find your people in Montréal.",
+      "heroSubtitle": "Spontaneous Events and Clubs that last, from the Plateau to the Village. {users} people already go out together here.",
+      "heroMockupAlt": "The bubbleOut app open on an Event in Montréal",
+      "heroPhotoAlt": "A group of people gathered at a bubbleOut Event in Montréal",
+      "proofSrTitle": "Montréal in numbers",
+      "proofUsers": "people in Montréal",
+      "eventsTitle": "Last month's Events in Montréal",
+      "eventsSubtitle": "This is what happened last month, from Parc La Fontaine to the Quai de l'Horloge. The next one might be yours.",
+      "eventsCta": "Join them on the app",
       "howSteps": [
         {
-          "title": "Découvre ce qui se passe dans ton coin",
-          "body": "Des Events et des Clubs près de chez toi, du Mile End au Village, selon tes envies."
+          "title": "Discover what's happening in your area",
+          "body": "Events and Clubs near you, from the Mile End to the Village, matched to what you're into."
         },
         {
-          "title": "Rejoins, ou propose ton plan",
-          "body": "Un pique-nique au parc La Fontaine te parle ? Demande à rejoindre. Rien ne te tente ? Propose ton plan en 2 minutes."
+          "title": "Join, or propose your own plan",
+          "body": "A picnic at Parc La Fontaine speaks to you? Ask to join. Nothing tempting? Propose your own plan in 2 minutes."
         },
         {
-          "title": "Retrouve tes humains",
-          "body": "Le chat du groupe, les Talks pour voter la prochaine sortie. Terrasse en été, café quand il fait -20 : vous vous revoyez."
+          "title": "See your people again",
+          "body": "The group Chat, Talks to vote on the next outing. Patio in summer, café when it's -20: you keep meeting up."
         }
       ],
-      "clubsIntro": "Un Event, c'est un soir. Un Club, c'est ce qui fait que vous vous revoyez : un dimanche au parc La Fontaine, un 5 à 7 qui devient rituel. C'est la façon la plus simple de se faire des amis à Montréal : faire des trucs ensemble, souvent.",
+      "clubsIntro": "An Event happens once. A Club is what brings you back together: a Sunday at Parc La Fontaine, after-work drinks that turn into a ritual. It's the easiest way to make friends in Montréal: doing things together, often.",
       "personas": [
         {
-          "title": "Tu viens d'arriver à Montréal",
-          "body": "Nouvelle ville, nouveaux repères. Ta communauté locale à partir du jour 1 : commence en observant, personne ne te presse."
+          "title": "You just moved to Montréal",
+          "body": "New city, no bearings, and winter coming fast. Find your local community from day one, from the Plateau to Verdun. Start by watching, nobody's rushing you."
         },
         {
-          "title": "Ton crew s'est dispersé",
-          "body": "Des humains pour tes mardis ordinaires, pas juste les soirs de festival."
+          "title": "Your crew drifted apart",
+          "body": "Some moved to the suburbs, others work all the time. People for your ordinary Tuesdays, not just Osheaga or Jazz Fest nights."
         },
         {
-          "title": "Tu rassembles les gens",
-          "body": "Crée ton Club, propose des Events, bâtis ta communauté montréalaise. C'est toi l'admin."
+          "title": "You bring people together",
+          "body": "Create your Club, propose Events, build your Montréal community. A run on Mount Royal, drinks on the Plateau: you're the admin."
         },
         {
-          "title": "T'as envie de spontané",
-          "body": "Un rayon de soleil en avril, un plan en 2 minutes. Viens une fois, zéro obligation. Si la vibe te parle, t'as trouvé tes gens."
+          "title": "You're after something spontaneous",
+          "body": "First sun on the patio, a plan in 2 minutes. Come once, zero obligation. If the vibe clicks, you're in the right place."
         }
       ],
-      "finalSubtitle": "Montréal sort déjà. Rejoins-la.",
-      "eventsLiveTitle": "En ce moment à Montréal",
-      "eventsLiveSubtitle": "De vrais Events, créés par de vrais humains d'ici."
+      "finalSubtitle": "Montréal is already out. Join it.",
+      "eventsLiveTitle": "Right now in Montréal",
+      "eventsLiveSubtitle": "Real Events, created by real people from here."
     },
     "paris": {
-      "metaTitle": "bubbleOut Paris | fonde ton Club, sois dans les premiers",
-      "metaDescriptionPre": "bubbleOut arrive à Paris. Fonde un des premiers Clubs de ta ville, propose des sorties et fais-toi des amis autour de ce que tu aimes faire. Profil vérifié.",
-      "metaDescriptionLive": "bubbleOut ouvre à Paris. Fonde un des premiers Clubs de ta ville, propose des sorties et fais-toi des amis autour de ce que tu aimes faire. Profil vérifié.",
-      "h1Pre": "bubbleOut arrive à Paris : les premiers Clubs se créent maintenant.",
-      "h1Live": "bubbleOut est à Paris : les premiers Clubs se créent maintenant.",
-      "heroSubtitlePre": "Running, apéro, jeux, musique : les premiers Clubs de Paris vont naître ici. Ceux qui arrivent maintenant donnent le ton de ce que Paris va devenir.",
-      "heroSubtitleLive": "Running, apéro, jeux, musique : les premiers Clubs se créent en ce moment. Ceux qui arrivent maintenant donnent le ton de ce que Paris va devenir.",
-      "ctaPrimary": "Fonde ton Club",
-      "ctaMicrocopy": "Créé en quelques secondes. Public ou privé, c'est toi l'admin.",
-      "heroMockupAlt": "L'app bubbleOut ouverte sur un Club",
-      "heroPhotoAlt": "Un groupe d'humains qui passent du temps ensemble",
-      "awaitTitle": "Ce qui t'attend",
-      "awaitIntro": "bubbleOut a commencé à Montréal. Plutôt que te promettre, on te montre.",
-      "awaitStatsTitle": "À Montréal, aujourd'hui :",
-      "awaitStatUsers": "humains",
-      "awaitStatEvents": "Events créés le mois dernier",
-      "awaitStatClubs": "Clubs actifs",
-      "awaitBody": "Des Clubs de course, d'apéro, de jeux qui se retrouvent et se revoient : Club Run MTL, Time to apéritz, Le club des loups-garous ( Jeu 🐺 ). Des humains qui se sont croisés à un Event et qui se revoient depuis.",
-      "awaitRelay": "Paris commence ce chapitre. Le Club de course des Buttes-Chaumont, l'apéro du canal Saint-Martin, la table de jeux du Marais : tout reste à fonder. Et le premier arrivé choisit l'ambiance.",
-      "finalSubtitle": "Paris, ça commence. La suite dépend de qui arrive maintenant."
+      "metaTitle": "bubbleOut Paris | start your Club, be one of the first",
+      "metaDescriptionPre": "bubbleOut is coming to Paris. Start one of the first Clubs in your city, propose outings and make friends around what you love doing. Verified profile.",
+      "metaDescriptionLive": "bubbleOut is opening in Paris. Start one of the first Clubs in your city, propose outings and make friends around what you love doing. Verified profile.",
+      "h1Pre": "bubbleOut is coming to Paris: the first Clubs are forming now.",
+      "h1Live": "bubbleOut is in Paris: the first Clubs are forming now.",
+      "heroSubtitlePre": "Running, drinks, games, music: the first Clubs in Paris will be born here. The people who show up now set the tone for what Paris becomes.",
+      "heroSubtitleLive": "Running, drinks, games, music: the first Clubs are forming right now. The people who show up now set the tone for what Paris becomes.",
+      "ctaPrimary": "Start your Club",
+      "ctaMicrocopy": "Created in seconds. Public or private, you're the admin.",
+      "heroMockupAlt": "The bubbleOut app open on a Club",
+      "heroPhotoAlt": "A group of people spending time together",
+      "awaitTitle": "What's waiting for you",
+      "awaitIntro": "bubbleOut started in Montréal. Instead of making promises, we'll show you.",
+      "awaitStatsTitle": "In Montréal, today:",
+      "awaitStatUsers": "people",
+      "awaitStatEvents": "Events created last month",
+      "awaitStatClubs": "active Clubs",
+      "awaitBody": "Running, drinks, and games Clubs that meet up again and again: Club Run MTL, Time to apéritz, Le club des loups-garous ( Jeu 🐺 ). People who crossed paths at an Event and have been meeting up ever since.",
+      "awaitRelay": "Paris is starting this chapter. The running Club at the Buttes-Chaumont, drinks along the Canal Saint-Martin, the games table in the Marais: it's all still to be founded. And whoever arrives first sets the mood.",
+      "foundTitle": "Start the Club Paris is waiting for",
+      "foundIntro": "No need to wait for someone to create your group. In Paris, everything is still to launch, and whoever opens the Club sets the mood. Here's what you've got in hand.",
+      "foundMockupAlt": "The bubbleOut app open on creating a Club",
+      "foundBenefits": [
+        {
+          "title": "You're the admin",
+          "body": "Public or private, you choose who joins, the pace and the rules. Your Club, your call."
+        },
+        {
+          "title": "Propose, the group votes",
+          "body": "With Talks, your members propose outings and you decide together. Nobody carries it all alone."
+        },
+        {
+          "title": "Everything in one place",
+          "body": "The Club Chat to lock in Events, share photos and keep the connection between outings."
+        },
+        {
+          "title": "You set the tone",
+          "body": "The first Clubs define what Paris becomes on bubbleOut. Showing up now means choosing the ground."
+        }
+      ],
+      "foundSlotCaption": "The energy of a bubbleOut Club. In Paris, you're the one who creates the next.",
+      "personas": [
+        {
+          "title": "You want to start something in Paris",
+          "body": "Create your Club, propose the first Events, set the tone. République, Canal Saint-Martin, Belleville: the ground is yours to choose. You're the admin."
+        },
+        {
+          "title": "You're new to Paris",
+          "body": "New city, or new neighbourhood. Find a local community without waiting months. Start by watching, nobody's rushing you."
+        },
+        {
+          "title": "Your crew drifted apart",
+          "body": "Between moves and work, you see each other less. People for your ordinary Tuesdays, not just the holidays."
+        },
+        {
+          "title": "You're after something spontaneous",
+          "body": "An afterwork thrown together in 2 minutes, a Sunday by the canal. Come once, zero obligation. If the vibe clicks, you're in the right place."
+        }
+      ],
+      "finalSubtitle": "Paris is just getting started. What comes next depends on who shows up now."
     }
   },
   "about": {
-    "metaTitle": "À propos de bubbleOut : la mission derrière l'app",
-    "metaDescription": "bubbleOut est né à Montréal avec une idée simple : que ton envie de sortir trouve toujours ses humains. Notre mission, nos valeurs et la suite à Paris.",
-    "h1": "Pourquoi on a créé bubbleOut",
-    "heroSubline": "On est l'équipe derrière l'app. Voici ce qu'on essaie de construire, et pourquoi.",
-    "missionTitle": "Notre mission",
-    "missionStatement": "Que ton envie de sortir trouve ses humains.",
+    "metaTitle": "About bubbleOut: the mission behind the app",
+    "metaDescription": "bubbleOut was born in Montréal with one simple idea: that your urge to go out always finds its people. Our mission, our values, and what's next in Paris.",
+    "h1": "Why we built bubbleOut",
+    "heroSubline": "We're the team behind the app. Here's what we're trying to build, and why.",
+    "missionTitle": "Our mission",
+    "missionStatement": "That your urge to go out finds its people.",
     "missionBody": [
-      "bubbleOut, c'est une app sociale locale : des Events spontanés, des Clubs qui durent, et des humains qui se retrouvent en vrai autour de ce qu'ils aiment faire.",
-      "Ta ville est pleine de gens qui aiment les mêmes choses que toi. Le running du dimanche matin, l'apéro qui s'éternise en terrasse. Notre travail, c'est de vous mettre dans la même pièce. Le reste, vous le faites très bien sans nous.",
-      "On a construit l'app autour d'une conviction : un Event, c'est un soir. Un Club, c'est ce qui fait que vous vous revoyez. Alors oui, tu peux proposer un plan en 2 minutes et voir qui est partant. Mais ce qui nous rend fiers, c'est ce qui se passe après : le groupe qui se redonne rendez-vous, qui vote sa prochaine sortie dans les Talks, qui continue de se parler dans le chat. L'app s'efface, le moment reste."
+      "bubbleOut is a local social app: spontaneous Events, Clubs that last, and people who meet up in real life around what they love doing.",
+      "Your city is full of people who love the same things you do. The Sunday morning run, the drinks that stretch late on a patio. Our job is to get you in the same room. The rest, you handle just fine without us.",
+      "We built the app around one conviction: an Event happens once. A Club is what brings you back together. So yes, you can propose a plan in 2 minutes and see who's in. But what makes us proud is what happens after: the group that sets another date, votes on its next outing in the Talks, keeps talking in the Chat. The app fades, the moment stays."
     ],
-    "valuesTitle": "Quatre choses qu'on ne négocie pas",
+    "valuesTitle": "Four things we don't compromise on",
     "values": [
       {
-        "title": "Authenticité",
-        "body": "Des profils vérifiés, de vraies passions, zéro façade. Tu sais qui tu vas retrouver avant d'arriver."
+        "title": "Authenticity",
+        "body": "Verified profiles, real passions, zero façade. You know who you're meeting before you show up."
       },
       {
-        "title": "Communauté",
-        "body": "Le cœur de bubbleOut, ce sont les Clubs : des groupes qui vivent dans le temps. On mesure notre réussite au nombre de fois où vous vous revoyez."
+        "title": "Community",
+        "body": "The heart of bubbleOut is the Clubs: groups that live on over time. We measure our success by how often you meet up again."
       },
       {
-        "title": "Autonomie",
-        "body": "C'est toi qui crées. Ton Event, ton Club, tes règles : tu choisis qui rejoint, et autour de quoi. On fournit les outils, tu fais le reste."
+        "title": "Autonomy",
+        "body": "You're the one who creates. Your Event, your Club, your rules: you choose who joins, and what it's all about. We provide the tools, you do the rest."
       },
       {
         "title": "Inclusion",
-        "body": "Arriver seul·e, parler une autre langue, débarquer dans une ville inconnue : tout le monde commence quelque part. Ici, on te fait une place."
+        "body": "Showing up alone, speaking another language, landing in a city you don't know: everyone starts somewhere. Here, there's a place for you."
       }
     ],
-    "storyTitle": "Né à Montréal. Maintenant Paris.",
+    "storyTitle": "Born in Montréal. Now Paris.",
     "storyBody": [
-      "bubbleOut est né à Montréal. C'est là qu'on a vu les premiers Clubs prendre vie : des humains qui courent ensemble le dimanche matin, qui se retrouvent pour un apéro en terrasse ou une partie de loup-garou au Parc La Fontaine. C'est là qu'on a compris qu'on tenait quelque chose : des inconnus qui se croisent à un Event et qui finissent par se revoir chaque semaine.",
-      "Maintenant, on ouvre Paris. Les premiers Clubs parisiens se créent en ce moment, et ceux qui arrivent aujourd'hui donnent le ton de ce que la ville va devenir sur bubbleOut. Montréal nous a prouvé que l'idée tient. Paris écrit le chapitre suivant.",
-      "On est une petite équipe, entre Montréal et Paris, et on fait cette app avec soin."
+      "bubbleOut was born in Montréal. That's where we saw the first Clubs come to life: people running together on Sunday mornings, meeting up for drinks on a patio or a game of werewolf at Parc La Fontaine. That's where we understood we were onto something: strangers who cross paths at an Event and end up meeting again every week.",
+      "Now, we're opening Paris. The first Paris Clubs are forming right now, and the people who arrive today set the tone for what the city becomes on bubbleOut. Montréal proved the idea holds. Paris writes the next chapter.",
+      "We're a small team, between Montréal and Paris, and we make this app with care."
     ],
-    "ctaSubline": "Si tout ça te parle, la suite se passe dehors."
+    "ctaSubline": "If all of this speaks to you, the rest happens outside."
+  },
+  "security": {
+    "metaTitle": "Your safety | bubbleOut",
+    "metaDescription": "bubbleOut keeps your privacy safe: biometric verified profile, exact location never shared, active moderation and one-tap blocking. Go out with confidence.",
+    "h1": "Your safety. Our commitment.",
+    "heroSubline": "Verified profile, private location, active moderation: you go out with confidence, we handle the rest.",
+    "featuresTitle": "What we built for you",
+    "features": [
+      {
+        "title": "Biometric verified profile",
+        "body": "Every person on bubbleOut completed biometric verification. You know who you're meeting before you show up.",
+        "imgAlt": "Screenshot of bubbleOut biometric verification"
+      },
+      {
+        "title": "Your exact location stays private",
+        "body": "Others see a zone, not your address. Nobody knows where you live or work.",
+        "imgAlt": "Screenshot of bubbleOut location privacy"
+      },
+      {
+        "title": "Prohibited content removed",
+        "body": "Our moderation team acts on reports. Content that doesn't belong here disappears fast.",
+        "imgAlt": "Screenshot of bubbleOut content moderation"
+      },
+      {
+        "title": "Block and report in two taps",
+        "body": "Someone makes you uncomfortable? Block them, report them, two taps. The team takes it from there.",
+        "imgAlt": "Screenshot of bubbleOut block and report button"
+      }
+    ],
+    "onlineTipsTitle": "A few habits online",
+    "onlineTips": [
+      {
+        "title": "Don't share financial information",
+        "body": "There's no valid reason to ask for money on bubbleOut. If it happens, it's a scam. Report it right away."
+      },
+      {
+        "title": "Take time to get a feel for someone",
+        "body": "You don't have to share everything upfront. Your address, workplace, daily routine can wait until you trust someone."
+      },
+      {
+        "title": "Avoid messages you might regret",
+        "body": "What's sent can't be taken back. Get to know someone before going further."
+      },
+      {
+        "title": "Report what feels off",
+        "body": "Threatening behavior, harassment, inappropriate content: the reporting tools are there for that. We read every report."
+      }
+    ],
+    "irlTipsTitle": "For Events in real life",
+    "irlTips": [
+      {
+        "title": "Choose a public place",
+        "body": "Café, bar, park, museum: for a first time, pick busy spots. Avoid private addresses you don't know."
+      },
+      {
+        "title": "Let someone know",
+        "body": "A quick text with the location and time to someone close: two seconds and it changes everything. You can share the Event link directly."
+      },
+      {
+        "title": "Arrange your own transport",
+        "body": "Come and go on your own terms. You stay in control of when you leave."
+      },
+      {
+        "title": "Trust yourself",
+        "body": "If something feels off, leave. You don't need to justify it or stay out of polite obligation."
+      },
+      {
+        "title": "Watch what you consume",
+        "body": "Know where your drink comes from, keep an eye on it. Never let a stranger refill your glass."
+      },
+      {
+        "title": "Keep your belongings on you",
+        "body": "Phone, wallet, ID: keep them with you, not on the table."
+      }
+    ],
+    "ctaSubline": "You know the rules. What happens next is outdoors."
+  },
+  "faq": {
+    "metaTitle": "FAQ | Frequently asked questions | bubbleOut",
+    "metaDescription": "Everything you need to know about bubbleOut: Events, Clubs, Talks, Chat, Explore, safety, availability. Find the answer to your question in seconds.",
+    "h1": "How can we help?",
+    "intro": "Find answers to the most common questions about bubbleOut here.",
+    "categories": [
+      {
+        "category": "The app",
+        "items": [
+          {
+            "q": "What is bubbleOut?",
+            "a": "bubbleOut is a local social app. You discover Events around you, join Clubs built around your passions, and talk with members in the group Chat before meeting up in real life. No swiping, no feed: just outings and local communities."
+          },
+          {
+            "q": "Is bubbleOut a dating app?",
+            "a": "No. bubbleOut is not a dating app. You meet people through what you love doing: sports, music, food, cultural outings... The goal: living moments together, not finding a soulmate."
+          },
+          {
+            "q": "Is the app free?",
+            "a": "Yes, the app is free to download and use. A Premium subscription and paid options are available to unlock advanced features."
+          },
+          {
+            "q": "Which platforms is bubbleOut available on?",
+            "a": "bubbleOut is available on iOS (App Store) and Android (Google Play)."
+          }
+        ]
+      },
+      {
+        "category": "Events",
+        "items": [
+          {
+            "q": "What is an Event on bubbleOut?",
+            "a": "An Event is an outing proposed by a user: brunch, sport, a night out, an exhibition, a hike... You choose the theme, the place, the date and the capacity. It can be public (visible in Explore) or private (invite only)."
+          },
+          {
+            "q": "How do I join an Event?",
+            "a": "Find the Event through Explore or the interactive map, then send a request to join. The organizer accepts or declines. Once you're in, you join the Event's group Chat to talk before the outing."
+          },
+          {
+            "q": "How do I create an Event?",
+            "a": "In under a minute. You choose the theme, the place, the date, the capacity and the visibility (public or private). Requests to join arrive straight in the app. You accept or decline whoever you want."
+          },
+          {
+            "q": "Can I limit the number of people at my Event?",
+            "a": "Yes. You set a maximum capacity when you create it. If it fills up, you can raise it anytime from the Event settings."
+          }
+        ]
+      },
+      {
+        "category": "Clubs",
+        "items": [
+          {
+            "q": "What is a Club on bubbleOut?",
+            "a": "A Club is a local community built around a passion: running, board games, techno, foodies, film... Members meet up regularly through the Club's Events. That's the difference with a one-off Event: a Club lives on over time."
+          },
+          {
+            "q": "How do I join a Club?",
+            "a": "Find it in Explore or through a shared link, then send a request to join. The Club admin approves or declines your request."
+          },
+          {
+            "q": "How do I create a Club?",
+            "a": "You add a name, a theme, a cover photo and a location. Then you choose whether the Club is public (visible in Explore) or private (invite link only). You're automatically the admin and you manage join requests."
+          },
+          {
+            "q": "What are Talks in a Club?",
+            "a": "Talks are internal micro-polls. Members propose outing ideas, everyone votes, and the plans that rise to the top become Events. The group decides what it does."
+          }
+        ]
+      },
+      {
+        "category": "Explore and discovery",
+        "items": [
+          {
+            "q": "How does discovering Events and Clubs work?",
+            "a": "The Explore tab shows Events and Clubs within 100 km around you. Results take your filters into account: date, theme, members' age, gender, lifestyle, values, personality traits. No opaque algorithm: you see exactly why a Club or an Event is suggested to you."
+          },
+          {
+            "q": "Can I filter Events and Clubs by theme or date?",
+            "a": "Yes. Advanced filters let you sort by date and theme, but also by member profile (age, gender, lifestyle, values, personality traits). You refine until you find exactly what fits you."
+          },
+          {
+            "q": "Is there a map to see Events around me?",
+            "a": "Yes. The interactive map shows you the Events happening near you in real time. You can move around freely and see at a glance what's going on in your neighbourhood or in another area."
+          }
+        ]
+      },
+      {
+        "category": "Chat",
+        "items": [
+          {
+            "q": "How does Chat work on bubbleOut?",
+            "a": "Every Event has its own group Chat, available as soon as you're in. You can share messages, photos, voice notes and GIFs with everyone, before, during and after the outing."
+          },
+          {
+            "q": "Can I message someone privately?",
+            "a": "Yes. Outside the group chats, you can send a private message to any bubbleOut member."
+          }
+        ]
+      },
+      {
+        "category": "Safety and profile",
+        "items": [
+          {
+            "q": "How does bubbleOut verify profiles?",
+            "a": "bubbleOut requires mandatory profile verification for every account. No unverified profile can use the app's interactive features (joining an Event, a Club, sending a message...). This step makes sure you're interacting with real people."
+          },
+          {
+            "q": "Can other members see my exact location?",
+            "a": "No. bubbleOut uses your location to show you the Events and Clubs around you, but your exact location is never shared with other members."
+          }
+        ]
+      },
+      {
+        "category": "Availability",
+        "items": [
+          {
+            "q": "Which cities is bubbleOut available in?",
+            "a": "bubbleOut is available in Montréal and Paris. More cities are coming soon."
+          },
+          {
+            "q": "I don't live in Montréal or Paris. Can I use bubbleOut?",
+            "a": "The app works everywhere, but the community is concentrated in Montréal and Paris for now. If you want to bring bubbleOut to your city, reach out: we're looking for local ambassadors."
+          }
+        ]
+      }
+    ],
+    "ctaTitle": "Still have a question?",
+    "ctaBody": "Our team usually replies within 24 hours.",
+    "ctaButton": "Send a message"
+  },
+  "contact": {
+    "metaTitle": "Contact us | bubbleOut",
+    "metaDescription": "A question, an issue, or just want to say hi? Send us a message.",
+    "h1": "Send a request",
+    "introPre": "You can use this form or email us directly at ",
+    "form": {
+      "subjectLabel": "Subject",
+      "emailLabel": "Email address",
+      "messageLabel": "Message",
+      "submit": "Send",
+      "submitting": "Sending…",
+      "mailFrom": "From: ",
+      "sentTitle": "Message ready!",
+      "sentBody": "Your email opened in your mail app. Tap Send to confirm.",
+      "noMailConfigured": "No mail app set up?",
+      "sendAnother": "Send another message",
+      "errorPrefix": "Something went wrong. Reach us directly at "
+    }
+  },
+  "feedback": {
+    "metaTitle": "Write to us | bubbleOut",
+    "metaDescription": "Share your suggestions, reports or ideas to make bubbleOut better.",
+    "h1": "Send feedback",
+    "introPre": "You can use this section or email us directly at ",
+    "form": {
+      "emailLabel": "Email",
+      "emailPlaceholder": "So we can get back to you on the same topic",
+      "messageLabel": "Message",
+      "messagePlaceholder": "We're listening!",
+      "submit": "Send",
+      "submitting": "Sending…",
+      "mailSubject": "bubbleOut feedback",
+      "mailFrom": "From: ",
+      "sentTitle": "Thanks for your feedback!",
+      "sentBody": "Your email opened in your mail app. Tap Send to confirm.",
+      "noMailConfigured": "No mail app set up?",
+      "sendAnother": "Send another message",
+      "errorPrefix": "Something went wrong. Reach us directly at "
+    }
   }
 }

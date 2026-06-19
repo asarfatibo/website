@@ -162,3 +162,51 @@ export const SHOWCASE_CLUBS = SHOWCASE_CLUBS_BASE.map((club) => ({
   ...club,
   members: CLUB_MEMBERS[club.name] ?? club.members,
 }));
+
+/*
+  Montréal showcase Clubs — DISTINCT from the home set, so /montreal does not
+  duplicate the home (SEO + reason-to-exist). Names and descriptions are
+  organizer verbatim (cuts marked in the line). Member counts from
+  live-data.json (snapshot 2026-06-15), committed value as fallback. Covers
+  are the real club images from api.bubbleout.fr (club_img/). Selection
+  validated 2026-06-15; admins to be notified before go-live.
+*/
+const MONTREAL_SHOWCASE_CLUBS_BASE = [
+  {
+    name: "Beach Volley mtl 🏐",
+    theme: "Sport",
+    themeColor: "green",
+    members: 34,
+    line: "« Du volley en plein air pour tous les kiffeurs et kiffeuses de la balle et du soleil, peu importe le niveau 🏐🌞 »",
+    image: "/clubs/beach-volley-mtl.jpg",
+  },
+  {
+    name: "Be.u Community",
+    theme: "Bien-être",
+    themeColor: "pink",
+    members: 24,
+    line: "« Club de Journaling et de bien-être ☁️ »",
+    image: "/clubs/be-u-community.jpg",
+  },
+  {
+    name: "club techno rave",
+    theme: "Vie nocturne",
+    themeColor: "purple",
+    members: 20,
+    line: "« Toute les rave de Montréal »",
+    image: "/clubs/club-techno-rave.jpg",
+  },
+  {
+    name: "Vin sur Vin Mtl",
+    theme: "Apéritif",
+    themeColor: "blue",
+    members: 15,
+    line: "« un club de dégustation à Montréal, quelque part entre l'expérience sensorielle et la rencontre culturelle »",
+    image: "/clubs/vin-sur-vin-mtl.jpg",
+  },
+] as const;
+
+export const MONTREAL_SHOWCASE_CLUBS = MONTREAL_SHOWCASE_CLUBS_BASE.map((club) => ({
+  ...club,
+  members: CLUB_MEMBERS[club.name] ?? club.members,
+}));

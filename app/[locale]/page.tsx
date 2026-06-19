@@ -20,10 +20,10 @@ import instagramPosts from "@/lib/instagram-posts.json";
 
 
 const PERSONA_PHOTOS = [
-  "/assets/pictures/photo-walk-group.avif",
+  "/assets/pictures/photo.jpg",
   "/assets/pictures/eating-groups.avif",
-  "/assets/pictures/barbecue-party.png",
-  "/assets/pictures/soiree-dehors.png",
+  "/assets/pictures/barbecue-party.avif",
+  "/assets/pictures/soiree-dehors.avif",
 ] as const;
 
 const HOW_SCREENS = [
@@ -94,7 +94,7 @@ export default async function HomePage({
               className="relative mx-auto h-auto w-64 rotate-2 drop-shadow-xl md:w-72"
             />
             <Image
-              src="/assets/pictures/pique-nique-parc.png"
+              src="/assets/pictures/pique-nique-parc.avif"
               alt={dict.hero.heroPhotoAlt}
               width={224}
               height={150}
@@ -261,6 +261,7 @@ export default async function HomePage({
       <section className="mx-auto max-w-6xl px-4 pb-16 md:pb-20">
         <div className="rounded-card bg-green-light/25 p-8 md:p-12">
           <h2 className="max-w-3xl text-3xl md:text-4xl">{dict.trust.title}</h2>
+          {/* Liste des 3 points de réassurance masquée sur la home (demande Alban 2026-06-15) — strings conservées dans le dictionnaire (dict.trust.points)
           <ul className="mt-8 max-w-2xl space-y-4">
             {dict.trust.points.map((point) => (
               <li key={point} className="flex gap-3">
@@ -269,6 +270,36 @@ export default async function HomePage({
               </li>
             ))}
           </ul>
+          */}
+
+          {/* Bloc de clarté « c'est / ce n'est pas » — colonne positive dominante en premier, négative secondaire */}
+          <div className="mt-10 border-t border-ink/10 pt-8">
+            <p className="text-sm font-bold uppercase tracking-wide text-ink/50">{dict.trust.clarityIntro}</p>
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
+              <div className="rounded-card bg-white/70 p-6 shadow-sm">
+                <p className="font-display text-xl">{dict.trust.isLabel}</p>
+                <ul className="mt-4 space-y-3">
+                  {dict.trust.is.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span aria-hidden="true" className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-green" />
+                      <p>{item}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-card p-6">
+                <p className="font-bold text-ink/50">{dict.trust.isNotLabel}</p>
+                <ul className="mt-4 space-y-3 text-ink/50">
+                  {dict.trust.isNot.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span aria-hidden="true" className="mt-2 h-px w-3 shrink-0 bg-ink/30" />
+                      <p>{item}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

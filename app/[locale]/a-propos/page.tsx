@@ -16,9 +16,9 @@ import { ACCENTS, accentBg } from "@/lib/theme";
 */
 
 const HERO_PHOTOS = [
-  "/assets/pictures/painting-group.avif",
-  "/assets/pictures/sport-team.avif",
-  "/assets/pictures/echec-game-team.avif",
+  "/assets/pictures/food.jpg",
+  "/assets/pictures/cheers.jpg",
+  "/assets/pictures/photo.jpg",
 ] as const;
 
 export function generateStaticParams() {

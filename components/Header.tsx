@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { DOWNLOAD_LINK } from "@/lib/constants";
+import { LangSwitch } from "@/components/LangSwitch";
 
 export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const h = dict.header;
@@ -34,13 +35,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <Link href={`/${locale}/a-propos`} className="hidden text-sm hover:underline md:block">
             {h.about}
           </Link>
-          <Link
-            href={locale === "fr" ? "/en" : "/fr"}
-            aria-label={h.langSwitchLabel}
-            className="text-sm text-ink/60 hover:underline"
-          >
-            {locale === "fr" ? "EN" : "FR"}
-          </Link>
+          <LangSwitch locale={locale} label={h.langSwitchLabel} />
           <a
             href={DOWNLOAD_LINK}
             aria-label={h.ctaLabel}
