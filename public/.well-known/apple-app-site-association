@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "7P6WBJV9NR.com.bubbleout.social",
+        "paths": [
+          "/event_share/*",
+          "/share/*",
+          "/*"
+        ]
+      }
+    ]
+  }
+}

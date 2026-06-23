@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bubbleout.social",
+      "sha256_cert_fingerprints": [
+        "CE:52:A8:34:8A:C4:7D:B3:24:E7:A4:B8:E9:B5:2C:AD:9E:14:54:C4:9A:5D:ED:AA:1B:71:4F:96:46:22:C2:65",
+        "07:79:F2:C9:45:3C:AB:22:46:4F:FF:CD:5E:76:67:87:C4:92:C0:24:82:F5:FB:56:07:B4:3B:22:D7:32:74:8B",
+        "89:4E:33:66:B4:1A:4B:75:40:32:74:12:70:D3:70:67:83:F6:19:AF:DC:9E:84:54:FE:26:2A:69:0B:F8:F9:E8"
+      ]
+    }
+  }
+]
