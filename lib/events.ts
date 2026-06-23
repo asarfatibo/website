@@ -43,8 +43,19 @@ function publicPlace(localisation: string): string {
   return first;
 }
 
+// Dedupe key = sorted word-token set, so near-identical titles that only
+// differ in word order or casing collapse (e.g. organizers cross-posting the
+// same Event as `Black coffee "OfF Piknic"` and `OfF Piknic "BLACK COFFEE"`).
 function normTitle(t: string): string {
-  return t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  return t
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean)
+    .sort()
+    .join(" ");
 }
 
 export async function getUpcomingMontrealEvents(limit = 4): Promise<EventCard[] | null> {
@@ -59,7 +70,9 @@ export async function getUpcomingMontrealEvents(limit = 4): Promise<EventCard[] 
           $match: {
             start_date: { $gte: new Date() },
             eventVisibility: "public",
-            localisation: { $regex: "\\b(Montreal|Montréal|Canada)\\b", $options: "i" },
+            // NB: no \b word boundaries — MongoDB's PCRE mishandles \b next to
+            // the multibyte "é" under $options:"i", silently matching 0 docs.
+            localisation: { $regex: "(Montreal|Montréal|Canada)", $options: "i" },
             deletedAt: null,
             image: { $nin: [null, ""] },
           },
