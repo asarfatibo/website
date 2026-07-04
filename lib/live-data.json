@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-07-03",
+  "generatedAt": "2026-07-04",
   "stats": {
-    "usersMtlParis": 2137,
+    "usersMtlParis": 2147,
     "usersDisplay": "2 100+",
-    "usersMontreal": 2104,
+    "usersMontreal": 2115,
     "events30d": 26,
     "rating": "4,3 / 5",
     "clubsTotal": 17
   },
   "clubMembers": {
-    "Club Run MTL": 61,
-    "club techno rave": 23,
+    "Club Run MTL": 63,
+    "club techno rave": 25,
     "Be.u Community": 23,
     "Vin sur Vin Mtl": 14,
-    "Le club des loups-garous ( Jeu 🐺 )": 43,
-    "Beach Volley mtl 🏐": 44,
-    "MTL Sound Club 🪩": 56,
+    "Le club des loups-garous ( Jeu 🐺 )": 45,
+    "Beach Volley mtl 🏐": 45,
+    "MTL Sound Club 🪩": 57,
     "Time to apéritz": 93
   }
 }
