@@ -36,7 +36,14 @@ export function orgAndAppJsonLd(locale: Locale) {
           { "@type": "City", name: "Paris" },
         ],
         knowsAbout: KNOWS_ABOUT[locale],
-        sameAs: [STORE_LINKS.appStore, STORE_LINKS.googlePlay, SOCIAL_LINKS.instagram, SOCIAL_LINKS.tiktok],
+        sameAs: [
+          STORE_LINKS.appStore,
+          STORE_LINKS.googlePlay,
+          SOCIAL_LINKS.instagram,
+          SOCIAL_LINKS.tiktok,
+          // Entité Wikidata créée le 2026-07-11 (plan GEO, fiches externes)
+          "https://www.wikidata.org/wiki/Q140509972",
+        ],
       },
       {
         "@type": "MobileApplication",
