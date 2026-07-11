@@ -15,8 +15,12 @@ import {
 import { StoreBadges } from "@/components/StoreBadges";
 import { DownloadButton, Stars } from "@/components/ui";
 import { EventsGrid } from "@/components/EventsGrid";
+import { getLastMonthPopularMontrealEvents } from "@/lib/events";
 import { ACCENTS, accentBar, accentBg, accentTag, type Accent } from "@/lib/theme";
 import instagramPosts from "@/lib/instagram-posts.json";
+
+// ISR: the "mois dernier" Events grid refreshes hourly without a rebuild.
+export const revalidate = 3600;
 
 
 const PERSONA_PHOTOS = [
@@ -41,6 +45,7 @@ export default async function HomePage({
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const dict = await getDictionary(locale);
+  const lastMonthEvents = await getLastMonthPopularMontrealEvents();
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -129,7 +134,7 @@ export default async function HomePage({
         <h2 className="text-3xl md:text-4xl">{dict.cityModule.montreal.fallbackTitle}</h2>
         <p className="mt-3 text-lg text-ink/70">{dict.cityModule.montreal.fallbackSubtitle}</p>
         <div className="mt-10">
-          <EventsGrid events={CURATED_EVENTS} />
+          <EventsGrid events={lastMonthEvents ?? CURATED_EVENTS} />
         </div>
         <div className="mt-10">
           <DownloadButton label={dict.cityModule.montreal.cta} />
