@@ -4,14 +4,12 @@ import { getDictionary, isLocale } from "@/lib/i18n";
 import {
   APP_RATING,
   CURATED_EVENTS,
-  DOWNLOAD_LINK,
   LIVE_STATS,
   REVIEWS,
   SHOWCASE_CLUBS,
-  SITE_URL,
   SOCIAL_LINKS,
-  STORE_LINKS,
 } from "@/lib/constants";
+import { eventsItemListJsonLd, orgAndAppJsonLd } from "@/lib/jsonld";
 import { StoreBadges } from "@/components/StoreBadges";
 import { DownloadButton, Stars } from "@/components/ui";
 import { EventsGrid } from "@/components/EventsGrid";
@@ -46,33 +44,20 @@ export default async function HomePage({
   if (!isLocale(locale)) notFound();
   const dict = await getDictionary(locale);
   const lastMonthEvents = await getLastMonthPopularMontrealEvents();
+  const gridEvents = lastMonthEvents ?? CURATED_EVENTS;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        name: "bubbleOut",
-        url: SITE_URL,
-        logo: `${SITE_URL}/assets/logo/logo.svg`,
-        sameAs: [STORE_LINKS.appStore, STORE_LINKS.googlePlay, SOCIAL_LINKS.instagram, SOCIAL_LINKS.tiktok],
-      },
-      {
-        "@type": "MobileApplication",
-        name: "bubbleOut",
-        operatingSystem: "iOS, Android",
-        applicationCategory: "SocialNetworkingApplication",
-        offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
-        installUrl: DOWNLOAD_LINK,
-      },
-    ],
-  };
+  const jsonLd = orgAndAppJsonLd(locale);
+  const eventsJsonLd = eventsItemListJsonLd(gridEvents, dict.cityModule.montreal.fallbackTitle);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLd) }}
       />
 
       {/* S2 — Hero */}
@@ -134,7 +119,7 @@ export default async function HomePage({
         <h2 className="text-3xl md:text-4xl">{dict.cityModule.montreal.fallbackTitle}</h2>
         <p className="mt-3 text-lg text-ink/70">{dict.cityModule.montreal.fallbackSubtitle}</p>
         <div className="mt-10">
-          <EventsGrid events={lastMonthEvents ?? CURATED_EVENTS} />
+          <EventsGrid events={gridEvents} />
         </div>
         <div className="mt-10">
           <DownloadButton label={dict.cityModule.montreal.cta} />

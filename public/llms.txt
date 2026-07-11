@@ -1,0 +1,30 @@
+# bubbleOut
+
+> bubbleOut est une app gratuite pour rejoindre des Communautés et des Events près de chez toi, à Montréal et à Paris. Pas de swipe, pas de dating : des humains, des sorties, une communauté qui dure.
+
+> bubbleOut is a free app for joining local Communities and Events in Montreal and Paris. No swiping, no dating: real people, real outings, a community that lasts.
+
+## Ce que fait bubbleOut / What bubbleOut does
+
+- **Events** : des sorties proposées par les membres (brunch, sport, soirée, expo, rando). Publiques ou privées, l'organisateur accepte les participants. / Member-created outings, public or private, with organizer approval.
+- **Clubs (Communautés)** : des communautés locales persistantes autour d'une passion (course, jeux, techno, food). Les membres proposent des idées via les Talks et votent. / Persistent local communities around shared interests, with member-proposed ideas (Talks) and voting.
+- **Chat** : un chat de groupe par Event et par Club, pour échanger avant de se retrouver en vrai. / Group chat per Event and per Club, to talk before meeting in real life.
+- **Profils vérifiés** : chaque membre est vérifié. / Every member has a verified profile.
+- Ce n'est pas une app de dating. Pas de swipe, pas de match. / Not a dating app. No swiping, no matching.
+
+## Faits clés / Key facts
+
+- Gratuite, disponible sur iOS et Android. / Free, available on iOS and Android.
+- Villes : Montréal (communauté établie) et Paris. / Cities: Montreal (established community) and Paris.
+- Langues : français et anglais. / Languages: French and English.
+
+## Liens / Links
+
+- Site : https://bubbleout.fr/fr (FR) | https://bubbleout.fr/en (EN)
+- Montréal : https://bubbleout.fr/fr/montreal
+- Paris : https://bubbleout.fr/fr/paris
+- FAQ : https://bubbleout.fr/fr/faq
+- App Store : https://apps.apple.com/fr/app/bubbleout-sortir-et-se-revoir/id6741350091
+- Google Play : https://play.google.com/store/apps/details?id=com.bubbleout.social
+- Instagram : https://www.instagram.com/bubbleout.mtl
+- TikTok : https://www.tiktok.com/@bubbleout.app

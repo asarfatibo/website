@@ -5,6 +5,8 @@ import type { Accent } from "@/lib/theme";
 export type EventCard = {
   title: string;
   date: string;
+  // ISO date (YYYY-MM-DD) feeding the Event JSON-LD; `date` stays display-only.
+  startDateIso?: string;
   place: string;
   theme: string;
   themeColor: Accent;
@@ -81,6 +83,7 @@ function toEventCards(rows: Document[], limit: number): EventCard[] {
     events.push({
       title,
       date: dateFmt.format(new Date(row.start_date)),
+      startDateIso: new Date(row.start_date).toISOString().slice(0, 10),
       place: publicPlace(String(row.localisation ?? "")),
       theme: theme || "Event",
       themeColor: themeColor(theme),

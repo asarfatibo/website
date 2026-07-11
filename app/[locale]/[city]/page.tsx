@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { cities, getDictionary, isCity, isLocale, locales } from "@/lib/i18n";
+import { cities, getDictionary, isCity, isLocale, locales, type Locale } from "@/lib/i18n";
 import {
   CURATED_EVENTS,
-  DOWNLOAD_LINK,
   LIVE_STATS,
   MONTREAL_SHOWCASE_CLUBS,
   PARIS_LAUNCHED,
-  SITE_URL,
-  SOCIAL_LINKS,
-  STORE_LINKS,
 } from "@/lib/constants";
+import { eventsItemListJsonLd, orgAndAppJsonLd } from "@/lib/jsonld";
 import { StoreBadges } from "@/components/StoreBadges";
 import { DownloadButton } from "@/components/ui";
 import { EventsGrid } from "@/components/EventsGrid";
@@ -76,27 +73,8 @@ export async function generateMetadata({
   };
 }
 
-function CityJsonLd() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        name: "bubbleOut",
-        url: SITE_URL,
-        logo: `${SITE_URL}/assets/logo/logo.svg`,
-        sameAs: [STORE_LINKS.appStore, STORE_LINKS.googlePlay, SOCIAL_LINKS.instagram, SOCIAL_LINKS.tiktok],
-      },
-      {
-        "@type": "MobileApplication",
-        name: "bubbleOut",
-        operatingSystem: "iOS, Android",
-        applicationCategory: "SocialNetworkingApplication",
-        offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
-        installUrl: DOWNLOAD_LINK,
-      },
-    ],
-  };
+function CityJsonLd({ locale }: { locale: Locale }) {
+  const jsonLd = orgAndAppJsonLd(locale);
   return (
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
   );
@@ -113,22 +91,35 @@ export default async function CityPage({
 
   if (city === "montreal") {
     const liveEvents = await getUpcomingMontrealEvents();
-    return <MontrealPage dict={dict} liveEvents={liveEvents} />;
+    return <MontrealPage dict={dict} locale={locale} liveEvents={liveEvents} />;
   }
-  return <ParisPage dict={dict} />;
+  return <ParisPage dict={dict} locale={locale} />;
 }
 
 type Dict = Awaited<ReturnType<typeof getDictionary>>;
 
 /* ─── /montreal — proof framing ─── */
 
-function MontrealPage({ dict, liveEvents }: { dict: Dict; liveEvents: EventCard[] | null }) {
+function MontrealPage({
+  dict,
+  locale,
+  liveEvents,
+}: {
+  dict: Dict;
+  locale: Locale;
+  liveEvents: EventCard[] | null;
+}) {
   const page = dict.cityPages.montreal;
   const events = liveEvents ?? CURATED_EVENTS;
   const isLive = liveEvents !== null;
+  const eventsJsonLd = eventsItemListJsonLd(events, isLive ? page.eventsLiveTitle : page.eventsTitle);
   return (
     <>
-      <CityJsonLd />
+      <CityJsonLd locale={locale} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLd) }}
+      />
 
       {/* Hero géo-ancré */}
       <section className="overflow-hidden">
@@ -256,7 +247,7 @@ function MontrealPage({ dict, liveEvents }: { dict: Dict; liveEvents: EventCard[
 
 /* ─── /paris — pioneer framing, launch toggle ─── */
 
-function ParisPage({ dict }: { dict: Dict }) {
+function ParisPage({ dict, locale }: { dict: Dict; locale: Locale }) {
   const page = dict.cityPages.paris;
   const h1 = PARIS_LAUNCHED ? page.h1Live : page.h1Pre;
   const subtitle = PARIS_LAUNCHED ? page.heroSubtitleLive : page.heroSubtitlePre;
@@ -265,7 +256,7 @@ function ParisPage({ dict }: { dict: Dict }) {
 
   return (
     <>
-      <CityJsonLd />
+      <CityJsonLd locale={locale} />
 
       {/* Hero pionnier */}
       <section className="overflow-hidden">

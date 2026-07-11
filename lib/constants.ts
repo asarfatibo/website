@@ -84,6 +84,7 @@ export const CURATED_EVENTS: readonly import("./events").EventCard[] = [
   {
     title: "Pique Nique Parc Fontaine",
     date: "24 mai",
+    startDateIso: "2026-05-24",
     place: "Parc La Fontaine",
     theme: "Foodie",
     themeColor: "green",
@@ -92,6 +93,7 @@ export const CURATED_EVENTS: readonly import("./events").EventCard[] = [
   {
     title: "Tournoi de beer-pong",
     date: "9 mai",
+    startDateIso: "2026-05-09",
     place: "Union Française de Montréal",
     theme: "Vie nocturne",
     themeColor: "purple",
@@ -100,6 +102,7 @@ export const CURATED_EVENTS: readonly import("./events").EventCard[] = [
   {
     title: "Journaling de fin de mois 🌞💛",
     date: "29 mai",
+    startDateIso: "2026-05-29",
     place: "Les Alchimistes Café",
     theme: "Bien-être",
     themeColor: "pink",
@@ -108,6 +111,7 @@ export const CURATED_EVENTS: readonly import("./events").EventCard[] = [
   {
     title: "🎤 🎙️ VOIX LIBRE MTL 🔥",
     date: "2 mai",
+    startDateIso: "2026-05-02",
     place: "Parc La Fontaine",
     theme: "Musique",
     themeColor: "blue",
