@@ -377,6 +377,21 @@
     ],
     "ctaSubline": "Tu connais les règles. La suite se passe dehors."
   },
+  "blog": {
+    "metaTitle": "Blog bubbleOut | Sorties et vie sociale à Montréal et Paris",
+    "metaDescription": "Des guides concrets pour rencontrer du monde, sortir et construire ta vie sociale à Montréal et à Paris. Idées, lieux et conseils, par bubbleOut.",
+    "h1": "Le blog bubbleOut",
+    "intro": "Des guides concrets pour sortir, rencontrer du monde et construire ta vie sociale à Montréal et à Paris.",
+    "empty": "Les premiers articles arrivent bientôt.",
+    "publishedOn": "Publié le",
+    "updatedOn": "mis à jour le",
+    "backToBlog": "Tous les articles",
+    "cityTags": {
+      "montreal": "Montréal",
+      "paris": "Paris",
+      "both": "Montréal · Paris"
+    }
+  },
   "faq": {
     "metaTitle": "FAQ | Questions fréquentes | bubbleOut",
     "metaDescription": "Tout ce qu'il faut savoir sur bubbleOut : Events, Clubs, Talks, Chat, Explore, sécurité, disponibilité. Trouve la réponse à ta question en quelques secondes.",

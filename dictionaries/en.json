@@ -377,6 +377,21 @@
     ],
     "ctaSubline": "You know the rules. What happens next is outdoors."
   },
+  "blog": {
+    "metaTitle": "bubbleOut Blog | Social life in Montreal and Paris",
+    "metaDescription": "Practical guides to meet people, go out, and build your social life in Montreal and Paris. Ideas, places, and tips from the bubbleOut team.",
+    "h1": "The bubbleOut blog",
+    "intro": "Practical guides to go out, meet people, and build your social life in Montreal and Paris.",
+    "empty": "The first articles are on their way.",
+    "publishedOn": "Published on",
+    "updatedOn": "updated on",
+    "backToBlog": "All articles",
+    "cityTags": {
+      "montreal": "Montreal",
+      "paris": "Paris",
+      "both": "Montreal · Paris"
+    }
+  },
   "faq": {
     "metaTitle": "FAQ | Frequently asked questions | bubbleOut",
     "metaDescription": "Everything you need to know about bubbleOut: Events, Clubs, Talks, Chat, Explore, safety, availability. Find the answer to your question in seconds.",

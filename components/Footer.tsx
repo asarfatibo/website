@@ -1,9 +1,13 @@
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { SOCIAL_LINKS } from "@/lib/constants";
+import { hasBlogPosts } from "@/lib/blog";
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const f = dict.footer;
+  // The Blog link appears only once the first article is published — the
+  // validated footer stays untouched until then.
+  const showBlog = hasBlogPosts();
   return (
     <footer className="border-t border-ink/10 bg-cream">
       <div className="mx-auto max-w-6xl px-4 py-10">
@@ -26,6 +30,11 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <Link href={`/${locale}/faq`} className="hover:underline">
             FAQ
           </Link>
+          {showBlog && (
+            <Link href={`/${locale}/blog`} className="hover:underline">
+              Blog
+            </Link>
+          )}
           <a href={SOCIAL_LINKS.instagram} aria-label={f.instagramLabel} className="hover:underline">
             Instagram
           </a>

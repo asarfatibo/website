@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
+import { getAllPosts } from "@/lib/blog";
 
 const ROUTES: Array<{ path: string; priority: number; changeFrequency: "daily" | "weekly" | "monthly"; frOnly?: boolean }> = [
   { path: "", priority: 1.0, changeFrequency: "daily" },
@@ -17,7 +18,7 @@ const ROUTES: Array<{ path: string; priority: number; changeFrequency: "daily" |
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ROUTES.map(({ path, priority, changeFrequency, frOnly }) => ({
+  const entries: MetadataRoute.Sitemap = ROUTES.map(({ path, priority, changeFrequency, frOnly }) => ({
     url: `${SITE_URL}/fr${path}`,
     lastModified: new Date(),
     changeFrequency,
@@ -35,4 +36,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
           },
     },
   }));
+
+  // Blog: listed only once articles exist (the sitemap is rebuilt on every
+  // push, so each published article lands here automatically).
+  const posts = getAllPosts("fr");
+  if (posts.length > 0) {
+    entries.push({
+      url: `${SITE_URL}/fr/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+      alternates: {
+        languages: {
+          fr: `${SITE_URL}/fr/blog`,
+          en: `${SITE_URL}/en/blog`,
+          "x-default": `${SITE_URL}/fr/blog`,
+        },
+      },
+    });
+    for (const post of posts) {
+      const languages: Record<string, string> = { "x-default": `${SITE_URL}/fr/blog/${post.slug}` };
+      for (const l of post.locales) languages[l] = `${SITE_URL}/${l}/blog/${post.slug}`;
+      entries.push({
+        url: `${SITE_URL}/fr/blog/${post.slug}`,
+        lastModified: new Date(post.updated),
+        changeFrequency: "monthly",
+        priority: 0.7,
+        alternates: { languages },
+      });
+    }
+  }
+
+  return entries;
 }
