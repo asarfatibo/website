@@ -41,8 +41,8 @@ export function orgAndAppJsonLd(locale: Locale) {
           STORE_LINKS.googlePlay,
           SOCIAL_LINKS.instagram,
           SOCIAL_LINKS.tiktok,
-          // Entité Wikidata créée le 2026-07-11 (plan GEO, fiches externes)
-          "https://www.wikidata.org/wiki/Q140509972",
+          // Entité Wikidata créée le 2026-07-12 (plan GEO, fiches externes)
+          "https://www.wikidata.org/wiki/Q140521913",
         ],
       },
       {
