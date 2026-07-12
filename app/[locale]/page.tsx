@@ -295,7 +295,7 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Instagram — vrais derniers posts @bubbleout.mtl */}
+      {/* Instagram — vrais derniers posts @bubbleout.irl */}
       <section className="mx-auto max-w-6xl px-4 pb-16 md:pb-20">
         <h2 className="text-3xl md:text-4xl">{dict.instagram.title}</h2>
         <p className="mt-3 text-lg text-ink/70">{dict.instagram.subtitle}</p>

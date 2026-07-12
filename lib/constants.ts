@@ -12,8 +12,8 @@ export const STORE_LINKS = {
 } as const;
 
 export const SOCIAL_LINKS = {
-  instagram: "https://www.instagram.com/bubbleout.mtl",
-  instagramHandle: "@bubbleout.mtl",
+  instagram: "https://www.instagram.com/bubbleout.irl",
+  instagramHandle: "@bubbleout.irl",
   tiktok: "https://www.tiktok.com/@bubbleout.app",
 } as const;
 
