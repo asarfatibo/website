@@ -11,6 +11,9 @@ export type EventCard = {
   theme: string;
   themeColor: Accent;
   image: string;
+  // Per-Event Branch.io deeplink (event_master.share_link). Absent when the
+  // Event has none — the card then falls back to the global DOWNLOAD_LINK.
+  shareLink?: string;
 };
 
 export const EVENT_IMG_BASE = "https://api.bubbleout.fr:4003/public/event_img/";
@@ -88,6 +91,7 @@ function toEventCards(rows: Document[], limit: number): EventCard[] {
       theme: theme || "Event",
       themeColor: themeColor(theme),
       image: `${EVENT_IMG_BASE}${row.image}`,
+      shareLink: row.share_link ? String(row.share_link) : undefined,
     });
     if (events.length >= limit) break;
   }
@@ -127,7 +131,7 @@ export async function getUpcomingMontrealEvents(limit = 4): Promise<EventCard[] 
         },
         { $sort: { start_date: 1 } },
         { $limit: 20 },
-        { $project: { _id: 0, title: 1, start_date: 1, localisation: 1, frTheme: 1, image: 1 } },
+        { $project: { _id: 0, title: 1, start_date: 1, localisation: 1, frTheme: 1, image: 1, share_link: 1 } },
       ])
       .toArray();
 
@@ -188,7 +192,7 @@ export async function getLastMonthPopularMontrealEvents(limit = 4): Promise<Even
         },
         { $sort: { popularity: -1, start_date: -1 } },
         { $limit: 20 },
-        { $project: { _id: 0, title: 1, start_date: 1, localisation: 1, frTheme: 1, image: 1 } },
+        { $project: { _id: 0, title: 1, start_date: 1, localisation: 1, frTheme: 1, image: 1, share_link: 1 } },
       ])
       .toArray();
 

@@ -141,6 +141,8 @@ try {
           _id: 0,
           name: 1,
           members: { $size: { $ifNull: [{ $arrayElemAt: ["$m.users", 0] }, []] } },
+          // Per-Club Branch.io deeplink — each showcase card links to its Club.
+          share_link: 1,
         },
       },
     ])
@@ -160,6 +162,12 @@ try {
       clubsTotal: clubsTotal || prev.stats.clubsTotal,
     },
     clubMembers: Object.fromEntries(showcaseClubs.map((c) => [c.name, c.members])),
+    // Keyed by Club name (like clubMembers); a Club missing a share_link keeps
+    // the committed value so a refresh never blanks a working link.
+    clubShareLinks: {
+      ...prev.clubShareLinks,
+      ...Object.fromEntries(showcaseClubs.filter((c) => c.share_link).map((c) => [c.name, c.share_link])),
+    },
   };
 
   writeFileSync(OUT, JSON.stringify(data, null, 2) + "\n");

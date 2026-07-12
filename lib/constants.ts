@@ -33,6 +33,7 @@ export const LIVE_STATS = liveData.stats;
 export const LIVE_DATA_DATE = liveData.generatedAt;
 
 const CLUB_MEMBERS: Record<string, number> = liveData.clubMembers;
+const CLUB_SHARE_LINKS: Record<string, string> = liveData.clubShareLinks;
 
 /*
   Paris launch toggle — drives the [PRÉ-LANCEMENT] vs [JOUR J] wording on
@@ -165,6 +166,9 @@ const SHOWCASE_CLUBS_BASE = [
 export const SHOWCASE_CLUBS = SHOWCASE_CLUBS_BASE.map((club) => ({
   ...club,
   members: CLUB_MEMBERS[club.name] ?? club.members,
+  // Per-Club deeplink (live-data.json, refreshed by data:refresh); falls back
+  // to the global DOWNLOAD_LINK when a Club has no share_link.
+  shareLink: CLUB_SHARE_LINKS[club.name] ?? DOWNLOAD_LINK,
 }));
 
 /*
@@ -213,4 +217,5 @@ const MONTREAL_SHOWCASE_CLUBS_BASE = [
 export const MONTREAL_SHOWCASE_CLUBS = MONTREAL_SHOWCASE_CLUBS_BASE.map((club) => ({
   ...club,
   members: CLUB_MEMBERS[club.name] ?? club.members,
+  shareLink: CLUB_SHARE_LINKS[club.name] ?? DOWNLOAD_LINK,
 }));

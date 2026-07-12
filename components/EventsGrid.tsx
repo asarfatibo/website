@@ -9,7 +9,7 @@ export function EventsGrid({ events }: { events: readonly EventCard[] }) {
       {events.map((event) => (
         <li key={event.title}>
           <a
-            href={DOWNLOAD_LINK}
+            href={event.shareLink ?? DOWNLOAD_LINK}
             className="group block overflow-hidden rounded-card bg-white/70 shadow-sm transition-shadow hover:shadow-md"
           >
             <div className="relative aspect-[4/3] w-full overflow-hidden">
