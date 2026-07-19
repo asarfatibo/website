@@ -19,7 +19,7 @@ Pick Meetup if you want an established group around a specific interest, Timelef
 | | Meetup | Timeleft | bubbleOut |
 |---|---|---|---|
 | Format | Interest groups and meetups run by volunteer organizers | Dinners, drinks and runs with strangers, grouped by the app | Member-created Events and local Clubs built around interests |
-| Cost to attend | Free to sign up and join | You pay for your food and drinks at the venue | Free |
+| Cost to attend | Free to sign up and join | Subscription of 1, 3 or 12 months, plus your food and drinks at the venue | Free |
 | Cost to organize | Paid organizer subscription, price varies by country | You don't organize, the app builds the table | Free, anyone can create |
 | Who picks the group | You choose the group you like | The algorithm, based on age, personality and language | You do, and the host approves your request |
 | What's left afterwards | The group keeps going, meetups repeat | Nothing structured, you swap contacts or you don't | The Club, its chat and its next Events |
@@ -39,7 +39,7 @@ Timeleft puts you in a small group of strangers for a dinner, drinks or a run, w
 
 The scale is real: Timeleft claims more than 3 million members, over 200 cities across 52 countries, more than 80,000 dinners attended and 720 bookings a day. The mechanic deserves credit because it removes the actual blocker. Nobody to convince, no plan to carry, you just show up. If proposing an outing is the thing you never do, this is an effective way in.
 
-On price, be careful with what's floating around online, because the model has shifted. The official site now says you pay for your food and drinks at the venue. Check the exact cost in the app for your city before booking, since it varies by country and restaurant.
+On price, there are two separate costs, and this is the part most articles get wrong. Timeleft runs on a subscription: its help centre lists plans of 1 month, 3 months and 12 months, with the options varying by region and shown during sign-up. The subscription covers access to every event type in your city and as many bookings as you want during that period. Food, drinks and venue costs are not included and are paid directly on the day. Check the rate shown at sign-up for your city, since it depends on your region.
 
 The limit is structural. It's a one-off. The group exists for one evening, then it dissolves. If you click with two people, following up is entirely on you, with no shared space to find everyone again. A lot of people do dinner after dinner without ever building a circle.
 
@@ -57,7 +57,7 @@ Where bubbleOut is weaker: for a very specific interest, a ten-year-old Meetup g
 
 ## Which one fits what you're looking for?
 
-1. **Going out once this month with no organizing.** Timeleft. Book it, show up, done.
+1. **Going out once this month with no organizing.** Timeleft, if you're willing to take a subscription for it. Book it, show up, done.
 2. **A niche interest with experienced people.** Meetup, especially if a group already exists in your city.
 3. **Seeing the same people every week without paying.** bubbleOut, by joining a Club rather than a one-off Event.
 4. **Starting your own group.** bubbleOut or Meetup, keeping in mind creation is free on the first and paid on the second.
@@ -79,7 +79,7 @@ Free to attend, yes. Meetup states that membership costs nothing: you can sign u
 
 ### How much does Timeleft cost?
 
-Timeleft's official site currently says you pay for your food and drinks directly at the venue. The model changed recently, so prices quoted in older articles are no longer reliable. Check the amount shown in the app for your city before booking.
+Timeleft runs on a subscription, with 1, 3 and 12 month plans according to its help centre. The options offered vary by region and appear during sign-up. The subscription covers event access and bookings for that period, but not food, drinks or venue costs, which you pay directly on the day. So budget for two costs, not one.
 
 ### What's the best Meetup alternative in Montreal?
 
@@ -91,4 +91,4 @@ No, none of the three. Meetup runs interest groups, Timeleft assembles tables of
 
 ### Can you use more than one of these at once?
 
-Yes, and in the first few months that's usually the smart move. A Timeleft dinner to get started, a Meetup group for a specific interest, a bubbleOut Club to build a regular rhythm. All three are free to try on the attendee side.
+Yes, and in the first few months that's usually the smart move. A Timeleft dinner to get started, a Meetup group for a specific interest, a bubbleOut Club to build a regular rhythm. On budget: joining Meetup and bubbleOut costs nothing, while Timeleft requires a subscription on top of what you spend at the venue.
