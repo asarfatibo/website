@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-01",
+  "generatedAt": "2026-10-02",
   "stats": {
     "usersMtlParis": 2231,
     "usersDisplay": "2 200+",
     "usersMontreal": 2194,
-    "events30d": 13,
+    "events30d": 11,
     "rating": "4,3 / 5",
-    "clubsTotal": 29
+    "clubsTotal": 28
   },
   "clubMembers": {
     "Club Run MTL": 89,
@@ -15,7 +15,7 @@
     "Vin sur Vin Mtl": 31,
     "Le club des loups-garous ( Jeu 🐺 )": 76,
     "Beach Volley mtl 🏐": 57,
-    "MTL Sound Club 🪩": 58,
+    "MTL Sound Club 🪩": 57,
     "Time to apéritz": 135
   },
   "clubShareLinks": {
